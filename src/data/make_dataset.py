@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from email.policy import default
 import click
 import logging
 from pathlib import Path
@@ -12,9 +11,7 @@ import pandas as pd
 import gzip
 from sklearn.model_selection import train_test_split
 import numpy as np
-from transformers import AutoTokenizer
-from collections import defaultdict
-from textwrap import wrap
+from transformers import BertTokenizer
 RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 torch.manual_seed(RANDOM_SEED)
@@ -46,11 +43,11 @@ def to_sentiment(rating):
 class_names = ['negative', 'neutral', 'positive']
 
 class AmazonData(Dataset):
-    def __init__(self, reviews, targets, tokenizer, max_len):
+    def __init__(self, reviews, targets, tokenizer, max_length):
         self.reviews = reviews
         self.targets = targets
         self.tokenizer = tokenizer
-        self.max_len = max_len
+        self.max_length = max_length
     
     def __len__(self):
         return len(self.reviews)
@@ -61,7 +58,7 @@ class AmazonData(Dataset):
         encoding = self.tokenizer.encode_plus(
             review,
             add_special_tokens=True,
-            max_length=self.max_len,
+            max_length=self.max_length,
             return_token_type_ids=False,
             pad_to_max_length=True,
             return_attention_mask=True,
@@ -94,18 +91,18 @@ def main(input_filepath, output_filepath):
     X_train, X_test, Y_train, Y_test = train_test_split(data,labels, train_size=0.75, test_size=0.25, random_state=42, shuffle=True)
     np.savez(input_filepath + '/../interim/train.npz', x=X_train, y=Y_train)
     np.savez(input_filepath + '/../interim/test.npz', x=X_test, y=Y_test)
-    tokenizer = AutoTokenizer.from_pretrained('bert-base-cased')
+    tokenizer = tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
     train_data = AmazonData(
         reviews=X_train,
         targets=Y_train,
         tokenizer=tokenizer,
-        max_len=160
+        max_length=20,
     )
     test_data = AmazonData(
         reviews=X_test,
         targets=Y_test,
         tokenizer=tokenizer,
-        max_len=160
+        max_length=20,
     )
     torch.save(train_data, output_filepath + '/train.pth')
     torch.save(test_data, output_filepath + '/test.pth')
