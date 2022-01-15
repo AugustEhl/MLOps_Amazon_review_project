@@ -3,7 +3,7 @@ import gzip
 import logging
 from pathlib import Path
 from dotenv import find_dotenv, load_dotenv
-#import wget
+import wget
 import os
 from pathlib import Path
 
@@ -11,7 +11,7 @@ import click
 import numpy as np
 import pandas as pd
 import torch
-import wget
+#import wget
 from dotenv import find_dotenv, load_dotenv
 from sklearn.model_selection import train_test_split
 from torch.utils.data import Dataset
@@ -87,13 +87,13 @@ def main(input_filepath, output_filepath):
     cleaned data ready to be analyzed (saved in ../processed).
     """
     logger = logging.getLogger(__name__)
-<<<<<<< HEAD
     logger.info('making final data set from raw data')
-    '''if 'reviews_Amazon_Instant_Video_5.json.gz' not in os.listdir(input_filepath):
+    if 'reviews_Amazon_Instant_Video_5.json.gz' not in os.listdir(input_filepath):
         print('Raw data folder appears to be empty. Downloading the data to raw data folder.')
         url = 'http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Amazon_Instant_Video_5.json.gz'
         filepath = wget.download(url, out=input_filepath)
-        print(filepath, 'Download finished!')'''
+        print(filepath, 'Download finished!')
+
     df = getDF(input_filepath + '/reviews_Amazon_Instant_Video_5.json.gz')
     data = df['reviewText'].to_numpy()
     labels = df['overall'].apply(to_sentiment).to_list()
@@ -101,25 +101,6 @@ def main(input_filepath, output_filepath):
     np.savez(input_filepath + '/../interim/train.npz', x=X_train, y=Y_train)
     np.savez(input_filepath + '/../interim/test.npz', x=X_test, y=Y_test)
     tokenizer = tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
-=======
-    logger.info("making final data set from raw data")
-    if "reviews_Amazon_Instant_Video_5.json.gz" not in os.listdir(input_filepath):
-        print(
-            "Raw data folder appears to be empty. Downloading the data to raw data folder."
-        )
-        url = "http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Amazon_Instant_Video_5.json.gz"
-        filepath = wget.download(url, out=input_filepath)
-        print(filepath, "Download finished!")
-    df = getDF(input_filepath + "/reviews_Amazon_Instant_Video_5.json.gz")
-    data = df["reviewText"].to_numpy()
-    labels = df["overall"].apply(to_sentiment).to_list()
-    X_train, X_test, Y_train, Y_test = train_test_split(
-        data, labels, train_size=0.75, test_size=0.25, random_state=42, shuffle=True
-    )
-    np.savez(input_filepath + "/../interim/train.npz", x=X_train, y=Y_train)
-    np.savez(input_filepath + "/../interim/test.npz", x=X_test, y=Y_test)
-    tokenizer = tokenizer = BertTokenizer.from_pretrained("bert-base-cased")
->>>>>>> 5e1453eb872e5d745356f8a91b1c6aa74027ef72
     train_data = AmazonData(
         reviews=X_train,
         targets=Y_train,
