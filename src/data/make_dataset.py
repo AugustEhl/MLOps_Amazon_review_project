@@ -3,7 +3,7 @@ import click
 import logging
 from pathlib import Path
 from dotenv import find_dotenv, load_dotenv
-import wget
+#import wget
 import os
 import torch
 from torch.utils.data import Dataset
@@ -15,9 +15,7 @@ from transformers import BertTokenizer
 RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 torch.manual_seed(RANDOM_SEED)
-
-
-#
+2
 def parse(path):
   g = gzip.open(path, 'rb')
   for l in g:
@@ -80,11 +78,11 @@ def main(input_filepath, output_filepath):
     """
     logger = logging.getLogger(__name__)
     logger.info('making final data set from raw data')
-    if 'reviews_Amazon_Instant_Video_5.json.gz' not in os.listdir(input_filepath):
+    '''if 'reviews_Amazon_Instant_Video_5.json.gz' not in os.listdir(input_filepath):
         print('Raw data folder appears to be empty. Downloading the data to raw data folder.')
         url = 'http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Amazon_Instant_Video_5.json.gz'
         filepath = wget.download(url, out=input_filepath)
-        print(filepath, 'Download finished!')
+        print(filepath, 'Download finished!')'''
     df = getDF(input_filepath + '/reviews_Amazon_Instant_Video_5.json.gz')
     data = df['reviewText'].to_numpy()
     labels = df['overall'].apply(to_sentiment).to_list()
