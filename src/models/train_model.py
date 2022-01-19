@@ -27,12 +27,11 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 sweep_config = {"method": "random"}
 
 parameters_dict = {
-    "optimizer": {"values": ["adam", "sgd"]},
-    "batch_size": {"values": [150, 200, 250]},
-    "epochs": {"value": 5},
-    "num_workers": {"value": 8},
-    "drop_out": {"values": [0.15, 0.25, 0.35]},
-    "lr": {"values": [0.01, 0.001]},
+    "optimizer": {"value": "sgd"},
+    "batch_size": {"value": 20},
+    "epochs": {"value": 3},
+    "drop_out": {"value": 0.15},
+    "lr": {"value": 0.01},
 }
 sweep_config["parameters"] = parameters_dict
 pprint.pprint(sweep_config)
@@ -66,6 +65,7 @@ class SentimentClassifier(nn.Module):
 
 loss_fn = nn.CrossEntropyLoss().to(device)
 
+
 @click.command()
 @click.argument("input_filepath", type=click.Path())
 def train(input_filepath, config=None):
@@ -92,7 +92,7 @@ def train(input_filepath, config=None):
         model = SentimentClassifier(n_classes=3, p=config.drop_out).to(device)
         train_set = torch.load(input_filepath)
         trainloader = DataLoader(
-            train_set, batch_size=config.batch_size, shuffle=True, num_workers=config.num_workers
+            train_set, batch_size=config.batch_size, shuffle=True
         )
         opt = config.optimizer
         if opt == "adam":
@@ -123,54 +123,27 @@ def train(input_filepath, config=None):
                 loss.backward()
                 optimizer.step()
 
-                y_pred = F.softmax(output, dim=1).argmax(dim=1).data.numpy()
-                confmat = confusion_matrix(labels.data.numpy(), y_pred)
-                tp = np.trace(confmat)
-                fn = (
-                    np.sum(confmat[0, 1:3])
-                    + np.sum(confmat[1, 0])
-                    + np.sum(confmat[1, 2])
-                    + np.sum(confmat[2, 0:2])
-                )
-                tn = (
-                    np.sum(confmat[0:2, 0:2])
-                    + np.sum(confmat[1:3, 1:3])
-                    + confmat[0, 0]
-                    + confmat[0, 2]
-                    + confmat[2, 0]
-                    + confmat[2, 2]
-                )
-                fp = (
-                    np.sum(confmat[1:3, 0])
-                    + confmat[0, 1]
-                    + confmat[2, 1]
-                    + np.sum(confmat[0:2, 2])
-                )
-
-                running_sens += tp / (tp + fn) / len(trainloader)
-                running_spec += tn / (tn + fp) / len(trainloader)
-                running_acc += (tp + tn) / confmat.sum() / len(trainloader)
+                y_pred = F.softmax(output, dim=1).argmax(dim=1)
+                running_acc += ((y_pred == labels).sum()/ labels.shape[0]).item() / len(trainloader)
                 wandb.log(
                     {
                         "Epoch_" + str(i + 1) + " (Batch loss)": running_loss,
                         "Epoch_" + str(i + 1) + " (Batch accuracy)": running_acc,
                     }
                 )
-                if ((batch_idx + 1) % 5) == 0:
+                if ((batch_idx + 1) % 2) == 0:
                     print(
-                        f"Loss: {running_loss} \tAccuracy: {round(running_acc,4) * 100}%\nSensitivity: {round(running_sens,4) * 100}%\tSpecificity: {round(running_spec,4) * 100}%"
+                        f"Loss: {running_loss} \tAccuracy: {round(running_acc,4) * 100}%"
                     )
                     random_review = np.random.randint(labels.shape[0])
                     table.add_data(labels[random_review], y_pred[random_review])
             print(
-                f"Epoch {i+1} loss: {running_loss / len(trainloader)} \tEpoch acc.: {running_acc}"
+                f"Epoch {i+1} loss: {running_loss / len(trainloader)} \tEpoch acc: {running_acc}"
             )
             wandb.log(
                 {
                     "Loss": running_loss / len(trainloader),
                     "Accuracy": running_acc,
-                    "Sensitivity": running_sens,
-                    "Specificity": running_spec,
                     "Classes": table,
                 }
             )
@@ -181,4 +154,4 @@ def train(input_filepath, config=None):
 
 
 if __name__ == "__main__":
-    wandb.agent(sweep_id, train, count=5)
+    wandb.agent(sweep_id, train, count=1)
