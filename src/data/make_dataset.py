@@ -69,6 +69,7 @@ class AmazonData(Dataset):
             pad_to_max_length=True,
             return_attention_mask=True,
             return_tensors="pt",
+            truncation=True,
         )
         return {
             "review_text": review,

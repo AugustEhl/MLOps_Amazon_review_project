@@ -1,0 +1,24 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.9.7",
+    "heartbeatAt": "2022-01-17T17:41:05.664056",
+    "startedAt": "2022-01-17T17:41:04.355518",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "data/processed/train.pth"
+    ],
+    "state": "running",
+    "program": "/Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Amazon_review_project/src/models/train_model.py",
+    "codePath": "src/models/train_model.py",
+    "git": {
+        "remote": "git@github.com:AugustEhl/MLOps_Amazon_review_project.git",
+        "commit": "e638bb203b65dcbd9c6926fb106f1e1eeebaa46f"
+    },
+    "email": "august.ehlers@gmail.com",
+    "root": "/Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Amazon_review_project",
+    "host": "MacBook-Pro-tilhrende-August.local",
+    "username": "augustehlers",
+    "executable": "/Users/augustehlers/miniconda3/envs/MLOPs_project/bin/python"
+}
