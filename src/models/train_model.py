@@ -5,7 +5,6 @@ import warnings
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-import click
 import numpy as np
 from sklearn.metrics import confusion_matrix
 import torch
@@ -29,7 +28,6 @@ sweep_config = {"method": "random"}
 parameters_dict = {
     "optimizer": {"value": "sgd"},
     "batch_size": {"value": 20},
-    "epochs": {"value": 3},
     "drop_out": {"value": 0.15},
     "lr": {"value": 0.01},
 }
@@ -62,13 +60,54 @@ class SentimentClassifier(nn.Module):
         output = self.drop(pooled_output)
         return self.out(output)
 
-
 loss_fn = nn.CrossEntropyLoss().to(device)
 
+def build_dataLoader(data, batch_size):
+    return DataLoader(data, batch_size=batch_size, shuffle=True, num_workers=8)
 
-@click.command()
-@click.argument("input_filepath", type=click.Path())
-def train(input_filepath, config=None):
+def build_optimizer(opt, model, lr):
+    if opt == 'adam':
+        return optim.Adam(model.parameters(), lr=lr, betas=(0.85,0.89), weight_decay=1e-3)
+    else:
+        return optim.SGD(model.parameters(), lr=lr, momentum=0.9, weight_decay=1e-3)
+
+def train_epoch(model, trainloader, optimizer):
+    running_loss = 0
+    running_acc = 0
+    num_batches = len(trainloader)
+    for batch_idx, data in enumerate(trainloader):
+        print(f"Batch {batch_idx+1} of {num_batches}")
+        input_ids = data["input_ids"].to(device)
+        attention_mask = data["attention_mask"].to(device)
+        labels = data["targets"].to(device)
+        optimizer.zero_grad()
+        output = model(input_ids=input_ids, attention_mask=attention_mask)
+        loss = loss_fn(output, labels)
+        running_loss += loss.item()
+
+        loss.backward()
+        optimizer.step()
+
+        y_pred = F.softmax(output, dim=1).argmax(dim=1)
+        running_acc += ((y_pred == labels).sum()/ labels.shape[0]).item() / num_batches
+        wandb.log(
+            {
+                "Epoch_" + str(i + 1) + " (Batch loss)": running_loss,
+                "Epoch_" + str(i + 1) + " (Batch accuracy)": running_acc,
+            }
+        )
+        if ((batch_idx + 1) % 2) == 0:
+            print(
+                f"Loss: {running_loss} \tAccuracy: {round(running_acc,4) * 100}%"
+            )
+            random_review = np.random.randint(labels.shape[0])
+            table.add_data(labels[random_review], y_pred[random_review])
+    return running_loss / num_batches, running_acc
+
+def build_model(dropout):
+    return SentimentClassifier(n_classes=3, p=dropout)
+
+def train(config=None):
     """
     Function to train model and store training results
     Requirements:
@@ -89,61 +128,22 @@ def train(input_filepath, config=None):
         print("Initializing training")
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         print(device)
-        model = SentimentClassifier(n_classes=3, p=config.drop_out).to(device)
-        train_set = torch.load(input_filepath)
-        trainloader = DataLoader(
-            train_set, batch_size=config.batch_size, shuffle=True
-        )
-        opt = config.optimizer
-        if opt == "adam":
-            optimizer = optim.Adam(
-                model.parameters(), lr=config.lr, betas=(0.85, 0.89), weight_decay=1e-3
-            )
-        else:
-            optimizer = optim.SGD(
-                model.parameters(), lr=config.lr, momentum=0.9, weight_decay=1e-3
-            )
+        model = build_model(config.drop_out).to(device)
+        train_set = torch.load('data/processed/train.pth')
+        trainloader = build_dataLoader(train_set, config.batch_size)
+        optimizer = build_optimizer(config.optimizer, model, config.lr)
+        num_epochs = 3
         model.train()
-        for i in range(config.epochs):
-            print(f"Epoch {i+1} of {config.epochs}")
-            running_loss = 0
-            running_acc = 0
-            running_sens = 0
-            running_spec = 0
-            for batch_idx, data in enumerate(trainloader):
-                print(f"Batch {batch_idx+1} of {len(trainloader)}")
-                input_ids = data["input_ids"].to(device)
-                attention_mask = data["attention_mask"].to(device)
-                labels = data["targets"].to(device)
-                optimizer.zero_grad()
-                output = model(input_ids=input_ids, attention_mask=attention_mask)
-                loss = loss_fn(output, labels)
-                running_loss += loss.item()
-
-                loss.backward()
-                optimizer.step()
-
-                y_pred = F.softmax(output, dim=1).argmax(dim=1)
-                running_acc += ((y_pred == labels).sum()/ labels.shape[0]).item() / len(trainloader)
-                wandb.log(
-                    {
-                        "Epoch_" + str(i + 1) + " (Batch loss)": running_loss,
-                        "Epoch_" + str(i + 1) + " (Batch accuracy)": running_acc,
-                    }
-                )
-                if ((batch_idx + 1) % 2) == 0:
-                    print(
-                        f"Loss: {running_loss} \tAccuracy: {round(running_acc,4) * 100}%"
-                    )
-                    random_review = np.random.randint(labels.shape[0])
-                    table.add_data(labels[random_review], y_pred[random_review])
+        for i in range(num_epochs):
+            print(f"Epoch {i+1} of {num_epochs}")
+            avg_loss, avg_acc = train_epoch(model, trainloader, optimizer)
             print(
-                f"Epoch {i+1} loss: {running_loss / len(trainloader)} \tEpoch acc: {running_acc}"
+                f"Epoch {i+1} loss: {avg_loss} \tEpoch acc: {avg_acc}"
             )
             wandb.log(
                 {
-                    "Loss": running_loss / len(trainloader),
-                    "Accuracy": running_acc,
+                    "Loss": avg_loss,
+                    "Accuracy": avg_acc,
                     "Classes": table,
                 }
             )
