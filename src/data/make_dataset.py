@@ -96,8 +96,8 @@ def main(input_filepath, output_filepath):
         filepath = wget.download(url, out=input_filepath)
         print(filepath, "Download finished!")
     df = getDF(input_filepath + "/reviews_Amazon_Instant_Video_5.json.gz")
-    data = df["reviewText"].to_numpy()
-    labels = df["overall"].apply(to_sentiment).to_list()
+    data = df["reviewText"].to_numpy()[:100]
+    labels = df["overall"].apply(to_sentiment).to_list()[:100]
     X_train, X_test, Y_train, Y_test = train_test_split(
         data, labels, train_size=0.75, test_size=0.25, random_state=42, shuffle=True
     )
