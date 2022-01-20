@@ -33,8 +33,6 @@ pprint.pprint(sweep_config)
 
 sweep_id = wandb.sweep(sweep_config, project="Amazon-Reviews", entity="amazonproject")
 
-table = wandb.Table(columns=["ReviewRating", "PredictedRating"])
-
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 loss_fn = nn.CrossEntropyLoss().to(device)
 
@@ -93,8 +91,6 @@ def train_epoch(model, trainloader, optimizer):
             print(
                 f"Loss: {running_loss} \tAccuracy: {round(running_acc,4) * 100}%"
             )
-            random_review = np.random.randint(labels.shape[0])
-            table.add_data(labels[random_review], y_pred[random_review])
     return running_loss / num_batches, running_acc
 
 def build_model(dropout):
@@ -137,8 +133,7 @@ def train(config=None):
             wandb.log(
                 {
                     "Loss": avg_loss,
-                    "Accuracy": avg_acc,
-                    "Classes": table,
+                    "Accuracy": avg_acc
                 }
             )
         torch.save(
