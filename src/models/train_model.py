@@ -84,7 +84,7 @@ def train(input_filepath, config=None):
         - models/final_model.pth
 
     """
-    with wandb.init(config=config):
+    with wandb.init(config=config, mode = 'disabled'):
         config = wandb.config
         print("Initializing training")
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
