@@ -1,0 +1,6 @@
+[core]
+    remote = remote_storage
+['remote "storage"']
+    url = gdrive://12Ft6Gjrutd30xK_drspqOCep7JMloi_N
+['remote "remote_storage"']
+    url = gs://amazonprojectbucket/
