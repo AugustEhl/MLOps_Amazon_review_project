@@ -46,6 +46,8 @@ np.random.seed(RANDOM_SEED)
 torch.manual_seed(RANDOM_SEED)
 device = torch.cuda.device("cuda" if torch.cuda.is_available() else "cpu")
 torch.cuda.manual_seed_all(RANDOM_SEED)
+dist.init_process_group(backend='nccl', init_method='env://')
+torch.cuda.set_device(2)
 loss_fn = nn.CrossEntropyLoss().to(device)
 
 
@@ -127,8 +129,6 @@ def train(config=None):
         - models/final_model.pth
 
     """
-    dist.init_process_group(backend='nccl', init_method='env://')
-    torch.cuda.set_device(2)
     with wandb.init(config=config):
         config = wandb.config
         print("Initializing training")
