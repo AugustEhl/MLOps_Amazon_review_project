@@ -24,14 +24,14 @@ sweep_config = {"method": "random"}
 
 parameters_dict = {
     "optimizer": {"values": ["sgd", "adam"]},
-    "batch_size": {"values": [150,200,250]},
+    "batch_size": {"values": [100,150,200,250]},
     "drop_out": {"values": [0.15,0.25,0.35]},
     "lr": {"values": [0.01,0.001]},
 }
 sweep_config["parameters"] = parameters_dict
 pprint.pprint(sweep_config)
 
-sweep_id = wandb.sweep(sweep_config, project="Amazon-Reviews", entity="amazonproject")
+sweep_id = wandb.sweep(sweep_config, project="Amazon-Reviews-v2", entity="amazonproject")
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 loss_fn = nn.CrossEntropyLoss().to(device)
@@ -121,7 +121,7 @@ def train(config=None):
         train_set = torch.load('data/processed/train.pth')
         trainloader = build_dataLoader(train_set, config.batch_size)
         optimizer = build_optimizer(config.optimizer, model, config.lr)
-        num_epochs = 3
+        num_epochs = 10
         model.train()
         for i in range(num_epochs):
             print(f"Epoch {i+1} of {num_epochs}")
@@ -138,9 +138,9 @@ def train(config=None):
             )
         torch.save(
             model,
-            f"models/model_opt{config.optimizer}_bs{config.batch_size}_do{config.drop_out}_lr{config.lr}.pth",
+            f"models/run_v2/model_opt{config.optimizer}_bs{config.batch_size}_do{config.drop_out}_lr{config.lr}.pth",
         )
 
 
 if __name__ == "__main__":
-    wandb.agent(sweep_id, train, count=5)
+    wandb.agent(sweep_id, train, count=15)
