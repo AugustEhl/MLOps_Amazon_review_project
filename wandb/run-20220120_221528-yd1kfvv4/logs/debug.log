@@ -1,0 +1,35 @@
+2022-01-20 22:15:28,652 INFO    Thread-72 :224864 [wandb_setup.py:_flush():71] setting env: {'entity': 'amazonproject', 'project': 'Amazon-Reviews-v2', 'root_dir': '/zhome/4a/f/117237/Documents/MLOps_Amazon_review_project', 'run_id': 'yd1kfvv4', 'sweep_param_path': '/zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/sweep-igrmn63w/config-yd1kfvv4.yaml', 'sweep_id': 'igrmn63w'}
+2022-01-20 22:15:28,652 INFO    Thread-72 :224864 [wandb_setup.py:_flush():71] setting login settings: {}
+2022-01-20 22:15:28,653 INFO    Thread-72 :224864 [wandb_init.py:_log_setup():371] Logging user logs to /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_221528-yd1kfvv4/logs/debug.log
+2022-01-20 22:15:28,653 INFO    Thread-72 :224864 [wandb_init.py:_log_setup():372] Logging internal logs to /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_221528-yd1kfvv4/logs/debug-internal.log
+2022-01-20 22:15:28,654 INFO    Thread-72 :224864 [wandb_init.py:init():404] calling init triggers
+2022-01-20 22:15:28,654 INFO    Thread-72 :224864 [wandb_init.py:init():411] wandb.init called with sweep_config: {'batch_size': 250, 'drop_out': 0.25, 'lr': 0.01, 'optimizer': 'adam'}
+config: {}
+2022-01-20 22:15:28,654 INFO    Thread-72 :224864 [wandb_init.py:init():460] starting backend
+2022-01-20 22:15:28,654 INFO    Thread-72 :224864 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-01-20 22:15:28,663 INFO    Thread-72 :224864 [backend.py:ensure_launched():216] starting backend process...
+2022-01-20 22:15:28,677 INFO    Thread-72 :224864 [backend.py:ensure_launched():222] started backend process with pid: 236816
+2022-01-20 22:15:28,692 INFO    Thread-72 :224864 [wandb_init.py:init():469] backend started and connected
+2022-01-20 22:15:28,694 INFO    Thread-72 :224864 [wandb_run.py:_config_callback():956] config_cb None None {'batch_size': 250, 'drop_out': 0.25, 'lr': 0.01, 'optimizer': 'adam'}
+2022-01-20 22:15:28,696 INFO    Thread-72 :224864 [wandb_init.py:init():533] updated telemetry
+2022-01-20 22:15:28,743 INFO    Thread-72 :224864 [wandb_init.py:init():563] communicating current version
+2022-01-20 22:15:29,872 INFO    Thread-72 :224864 [wandb_init.py:init():568] got version response 
+2022-01-20 22:15:29,872 INFO    Thread-72 :224864 [wandb_init.py:init():578] communicating run to backend with 30 second timeout
+2022-01-20 22:15:30,133 INFO    Thread-72 :224864 [wandb_init.py:init():606] starting run threads in backend
+2022-01-20 22:15:30,205 INFO    Thread-72 :224864 [wandb_run.py:_console_start():1810] atexit reg
+2022-01-20 22:15:30,207 INFO    Thread-72 :224864 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.REDIRECT
+2022-01-20 22:15:30,207 INFO    Thread-72 :224864 [wandb_run.py:_redirect():1689] Redirecting console.
+2022-01-20 22:15:30,207 ERROR   Thread-72 :224864 [wandb_run.py:_redirect():1748] Failed to redirect.
+Traceback (most recent call last):
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/wandb_run.py", line 1741, in _redirect
+    out_redir.install()
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/lib/redirect.py", line 709, in install
+    _WSCH.add_fd(self._pipe_read_fd)
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/lib/redirect.py", line 659, in add_fd
+    self._register()
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/lib/redirect.py", line 644, in _register
+    old_handler = signal.signal(signal.SIGWINCH, lambda *_: None)
+  File "/usr/lib64/python3.6/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread
+2022-01-20 22:15:30,208 INFO    Thread-72 :224864 [wandb_init.py:init():633] run started, returning control to user process

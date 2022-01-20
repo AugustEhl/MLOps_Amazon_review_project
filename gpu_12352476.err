@@ -1,0 +1,481 @@
+Loaded module: cuda/10.2
+wandb: Agent Starting Run: xpfo0wdl with config:
+wandb: 	batch_size: 100
+wandb: 	drop_out: 0.25
+wandb: 	lr: 0.001
+wandb: 	optimizer: adam
+wandb: Currently logged in as: augustehl (use `wandb login --relogin` to force relogin)
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run glowing-sweep-1
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/xpfo0wdl
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_185758-xpfo0wdl
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 224890... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▂▃▅▇▁▄▅▇▁▃▅▇▁▃▅▇▂▃▅▇▂▄▅▇▁▄▆▇▂▃▆█▂▄▅█▂▄▅█
+wandb:        (Batch loss) ▂▄▅▇▁▄▅▇▁▃▅▇▂▄▅█▂▃▅▇▂▄▅▇▁▄▆▇▂▃▆█▂▄▅█▂▄▅█
+wandb:            Accuracy ▆██▁██████
+wandb:                Loss ▅▂▁█▂▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.78938
+wandb:        (Batch loss) 184.91681
+wandb:            Accuracy 0.78938
+wandb:                Loss 0.66278
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced glowing-sweep-1: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/xpfo0wdl
+wandb: Find logs at: ./wandb/run-20220120_185758-xpfo0wdl/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: 7mm20pf0 with config:
+wandb: 	batch_size: 150
+wandb: 	drop_out: 0.15
+wandb: 	lr: 0.01
+wandb: 	optimizer: adam
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run olive-sweep-2
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/7mm20pf0
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_191303-7mm20pf0
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 225824... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▁▃▄▆▁▃▄▆▁▃▅▇▁▃▅▇▂▄▆▇▁▃▅▇▂▃▅▇▂▄▆█▂▄▆█▂▄▆█
+wandb:        (Batch loss) ▃▄▆█▁▃▅▇▁▂▄▅▁▃▄▅▁▃▄▅▁▂▄▅▁▃▄▅▂▃▄▅▂▃▄▅▂▃▄▆
+wandb:            Accuracy ▁▃████████
+wandb:                Loss █▅▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.78912
+wandb:        (Batch loss) 125.73894
+wandb:            Accuracy 0.78912
+wandb:                Loss 0.67602
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced olive-sweep-2: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/7mm20pf0
+wandb: Find logs at: ./wandb/run-20220120_191303-7mm20pf0/logs/debug.log
+wandb: 
+wandb: Sweep Agent: Waiting for job.
+wandb: Job received.
+wandb: Agent Starting Run: 0ul28rfx with config:
+wandb: 	batch_size: 150
+wandb: 	drop_out: 0.15
+wandb: 	lr: 0.01
+wandb: 	optimizer: adam
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run confused-sweep-3
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/0ul28rfx
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_192725-0ul28rfx
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 226678... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▁▂▄▆▁▃▅▆▁▃▅▇▂▃▅▇▂▄▆▇▁▃▅▇▂▄▅▇▂▄▆█▂▄▆█▂▄▆█
+wandb:        (Batch loss) ▂▄▆█▁▃▅▆▁▂▄▅▁▂▄▅▁▃▄▅▁▂▄▅▁▂▄▅▁▃▄▅▂▃▄▅▂▃▄▅
+wandb:            Accuracy ▁▄████████
+wandb:                Loss █▄▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.78929
+wandb:        (Batch loss) 124.40496
+wandb:            Accuracy 0.78929
+wandb:                Loss 0.66884
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced confused-sweep-3: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/0ul28rfx
+wandb: Find logs at: ./wandb/run-20220120_192725-0ul28rfx/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: fylpmztg with config:
+wandb: 	batch_size: 250
+wandb: 	drop_out: 0.35
+wandb: 	lr: 0.01
+wandb: 	optimizer: adam
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run lunar-sweep-4
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/fylpmztg
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_194148-fylpmztg
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 227542... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▁▂▄▆▁▂▄▆▁▂▅▇▁▃▅▇▁▃▅▇▁▃▅▇▁▃▆▇▁▃▆▇▁▃▆▇▁▃▆█
+wandb:        (Batch loss) ▂▃▆█▁▃▅█▁▂▄▆▁▃▄▅▁▃▄▅▁▃▄▅▁▃▄▅▁▃▄▅▁▃▄▅▁▃▄▆
+wandb:            Accuracy ▁▁▇███████
+wandb:                Loss █▇▂▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.78929
+wandb:        (Batch loss) 75.22794
+wandb:            Accuracy 0.78929
+wandb:                Loss 0.67168
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced lunar-sweep-4: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/fylpmztg
+wandb: Find logs at: ./wandb/run-20220120_194148-fylpmztg/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: fmc2uvy7 with config:
+wandb: 	batch_size: 200
+wandb: 	drop_out: 0.35
+wandb: 	lr: 0.01
+wandb: 	optimizer: sgd
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run splendid-sweep-5
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/fmc2uvy7
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_195534-fmc2uvy7
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 228366... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▂▃▄▆▁▃▅▆▁▃▅▇▁▃▄▇▂▃▅▆▂▃▅▇▁▄▅▇▁▃▆▇▂▃▅█▂▄▅█
+wandb:        (Batch loss) ▂▄▆█▁▄▅▇▁▃▅▆▁▃▄▆▁▂▄▅▁▂▃▄▁▂▃▄▁▂▃▃▁▂▂▃▁▁▂▃
+wandb:            Accuracy ▁▂▃▃▄▅▆▇▇█
+wandb:                Loss █▆▆▅▄▃▃▂▂▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.9534
+wandb:        (Batch loss) 17.83469
+wandb:            Accuracy 0.9534
+wandb:                Loss 0.12739
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced splendid-sweep-5: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/fmc2uvy7
+wandb: Find logs at: ./wandb/run-20220120_195534-fmc2uvy7/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: 4f5gkz2v with config:
+wandb: 	batch_size: 150
+wandb: 	drop_out: 0.25
+wandb: 	lr: 0.01
+wandb: 	optimizer: sgd
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run stoic-sweep-6
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/4f5gkz2v
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_200919-4f5gkz2v
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 229207... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▁▂▄▆▁▃▄▆▁▃▅▆▁▃▅▇▂▃▅▇▁▃▅▇▂▃▅▇▂▄▆▇▂▄▆█▂▄▆█
+wandb:        (Batch loss) ▂▃▆█▁▃▅▇▁▃▅▆▁▃▄▆▁▃▄▅▁▂▃▄▁▂▃▄▁▂▃▃▁▂▂▃▁▂▂▃
+wandb:            Accuracy ▁▂▃▄▄▅▆▇██
+wandb:                Loss █▇▆▅▄▃▂▂▁▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.9527
+wandb:        (Batch loss) 23.50725
+wandb:            Accuracy 0.9527
+wandb:                Loss 0.12638
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced stoic-sweep-6: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/4f5gkz2v
+wandb: Find logs at: ./wandb/run-20220120_200919-4f5gkz2v/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: 6axeewi8 with config:
+wandb: 	batch_size: 200
+wandb: 	drop_out: 0.15
+wandb: 	lr: 0.001
+wandb: 	optimizer: sgd
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run charmed-sweep-7
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/6axeewi8
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_202316-6axeewi8
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 230051... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▁▃▅▇▁▄▅▇▁▃▅▇▁▃▅▇▂▃▅▇▂▄▅▇▁▄▆▇▁▃▆█▂▃▅█▂▄▅█
+wandb:        (Batch loss) ▂▄▆█▁▄▅▇▁▃▅▇▁▃▄▇▁▃▄▆▂▃▄▆▁▃▅▆▁▃▅▆▁▃▄▆▂▃▄▆
+wandb:            Accuracy ▁▃▄▅▆▆▆▇▇█
+wandb:                Loss █▅▄▃▃▂▂▂▁▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.82576
+wandb:        (Batch loss) 62.18982
+wandb:            Accuracy 0.82576
+wandb:                Loss 0.44421
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced charmed-sweep-7: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/6axeewi8
+wandb: Find logs at: ./wandb/run-20220120_202316-6axeewi8/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: fkmgw5pm with config:
+wandb: 	batch_size: 100
+wandb: 	drop_out: 0.15
+wandb: 	lr: 0.01
+wandb: 	optimizer: sgd
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run bumbling-sweep-8
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/fkmgw5pm
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_203700-fkmgw5pm
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 230875... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▂▃▅▆▁▄▅▇▁▃▅▇▁▃▅▇▂▃▅▇▂▄▅▇▁▄▆▇▂▃▆█▂▄▅█▂▄▅█
+wandb:        (Batch loss) ▂▄▆█▁▄▆█▁▃▆█▂▃▅█▂▃▅▇▂▄▅▇▁▄▆▇▂▃▆▇▂▃▅█▂▄▅█
+wandb:            Accuracy ▁▅▇███████
+wandb:                Loss █▆▄▂▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.78951
+wandb:        (Batch loss) 184.85657
+wandb:            Accuracy 0.78951
+wandb:                Loss 0.66257
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced bumbling-sweep-8: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/fkmgw5pm
+wandb: Find logs at: ./wandb/run-20220120_203700-fkmgw5pm/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: vmsejjuo with config:
+wandb: 	batch_size: 200
+wandb: 	drop_out: 0.35
+wandb: 	lr: 0.01
+wandb: 	optimizer: sgd
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run peach-sweep-9
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/vmsejjuo
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_205127-vmsejjuo
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 231737... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▁▃▅▇▁▄▅▇▁▃▆▇▁▃▅█▂▃▅▇▂▄▅▇▁▄▆▇▁▃▆█▂▃▅█▂▄▅█
+wandb:        (Batch loss) ▂▄▆█▁▃▅▇▁▃▅▇▁▃▄▇▂▃▅▆▂▃▅▆▁▃▅▆▁▃▅▇▂▃▅▇▂▃▅▇
+wandb:            Accuracy ▁█████████
+wandb:                Loss █▂▂▂▂▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.78902
+wandb:        (Batch loss) 93.32036
+wandb:            Accuracy 0.78902
+wandb:                Loss 0.66657
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced peach-sweep-9: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/vmsejjuo
+wandb: Find logs at: ./wandb/run-20220120_205127-vmsejjuo/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: wj2pzcsh with config:
+wandb: 	batch_size: 250
+wandb: 	drop_out: 0.25
+wandb: 	lr: 0.01
+wandb: 	optimizer: sgd
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run neat-sweep-10
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/wj2pzcsh
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_210508-wj2pzcsh
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 232573... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▁▂▄▆▁▂▄▆▁▂▄▆▁▃▄▆▁▃▄▆▁▃▄▆▁▃▅▇▁▃▆▇▁▄▆▇▁▄▆█
+wandb:        (Batch loss) ▂▄▆█▂▃▅▇▂▃▄▆▁▃▄▅▁▃▄▅▁▃▃▅▁▂▄▄▁▂▃▄▁▂▃▃▁▂▃▄
+wandb:            Accuracy ▁▂▃▃▄▅▅▇██
+wandb:                Loss █▇▅▄▄▃▃▂▁▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.89479
+wandb:        (Batch loss) 30.0064
+wandb:            Accuracy 0.89479
+wandb:                Loss 0.26791
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced neat-sweep-10: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/wj2pzcsh
+wandb: Find logs at: ./wandb/run-20220120_210508-wj2pzcsh/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: mbs0s0g6 with config:
+wandb: 	batch_size: 200
+wandb: 	drop_out: 0.35
+wandb: 	lr: 0.001
+wandb: 	optimizer: adam
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run lyric-sweep-11
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/mbs0s0g6
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_211848-mbs0s0g6
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 233402... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▂▃▅▇▁▄▅▇▁▃▆▇▁▃▅█▂▃▅▇▂▄▅▇▁▄▆▇▁▃▆█▂▃▅█▂▄▅█
+wandb:        (Batch loss) ▂▄▅▇▁▄▅▇▁▃▆▇▁▃▅█▂▃▅▇▂▄▅▇▁▄▆▇▁▃▆█▂▃▅█▂▄▅█
+wandb:            Accuracy ▁▇██▇▆▇██▇
+wandb:                Loss █▃▂▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.78902
+wandb:        (Batch loss) 93.01563
+wandb:            Accuracy 0.78902
+wandb:                Loss 0.6644
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced lyric-sweep-11: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/mbs0s0g6
+wandb: Find logs at: ./wandb/run-20220120_211848-mbs0s0g6/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: moy88zb1 with config:
+wandb: 	batch_size: 100
+wandb: 	drop_out: 0.35
+wandb: 	lr: 0.001
+wandb: 	optimizer: sgd
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run summer-sweep-12
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/moy88zb1
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_213249-moy88zb1
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 234243... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▂▃▅▆▁▃▅▆▁▃▅▇▁▃▅▇▂▃▅▆▂▄▅▇▁▄▅▇▂▃▆▇▂▃▅█▂▄▅█
+wandb:        (Batch loss) ▂▄▆█▁▄▅▇▁▃▅▇▁▃▅▇▂▃▅▆▂▃▅▆▁▃▄▆▁▃▄▆▁▃▄▅▂▃▄▅
+wandb:            Accuracy ▁▂▃▄▄▅▆▆▇█
+wandb:                Loss █▆▅▅▄▃▃▂▂▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.87534
+wandb:        (Batch loss) 89.36182
+wandb:            Accuracy 0.87534
+wandb:                Loss 0.32029
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced summer-sweep-12: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/moy88zb1
+wandb: Find logs at: ./wandb/run-20220120_213249-moy88zb1/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: 6fq01114 with config:
+wandb: 	batch_size: 150
+wandb: 	drop_out: 0.25
+wandb: 	lr: 0.01
+wandb: 	optimizer: sgd
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run trim-sweep-13
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/6fq01114
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_214721-6fq01114
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 235105... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▁▂▄▆▁▃▄▆▁▃▅▆▁▃▅▆▂▃▅▇▁▃▅▇▂▃▅▇▂▄▅▇▂▄▆█▂▄▆█
+wandb:        (Batch loss) ▂▄▆█▁▃▅▇▁▃▅▇▁▃▅▆▁▃▄▆▁▂▄▅▁▂▃▅▁▂▃▄▁▂▃▄▁▂▃▃
+wandb:            Accuracy ▁▂▂▃▃▄▅▆▇█
+wandb:                Loss █▇▆▅▄▃▃▂▂▁
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.90875
+wandb:        (Batch loss) 43.38055
+wandb:            Accuracy 0.90875
+wandb:                Loss 0.23323
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced trim-sweep-13: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/6fq01114
+wandb: Find logs at: ./wandb/run-20220120_214721-6fq01114/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: 6a7tapgw with config:
+wandb: 	batch_size: 150
+wandb: 	drop_out: 0.15
+wandb: 	lr: 0.001
+wandb: 	optimizer: adam
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run fiery-sweep-14
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/6a7tapgw
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_220117-6a7tapgw
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+wandb: Waiting for W&B process to finish, PID 235958... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run history:
+wandb:    (Batch accuracy) ▁▃▅▇▁▃▅▇▁▃▅▇▁▃▅▇▂▄▆█▁▃▅▇▂▄▆█▂▄▆█▂▄▆█▂▄▆█
+wandb:        (Batch loss) ▂▃▅▆▁▃▅▆▁▃▅▇▁▃▅▇▂▃▅▇▁▃▅▇▁▃▅▇▂▃▅▇▂▄▅▇▂▄▆█
+wandb:            Accuracy ▅███████▇▁
+wandb:                Loss ▇▃▂▂▁▁▁▁▂█
+wandb: 
+wandb: Run summary:
+wandb:    (Batch accuracy) 0.75934
+wandb:        (Batch loss) 133.73571
+wandb:            Accuracy 0.75934
+wandb:                Loss 0.71901
+wandb: 
+wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced fiery-sweep-14: https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/6a7tapgw
+wandb: Find logs at: ./wandb/run-20220120_220117-6a7tapgw/logs/debug.log
+wandb: 
+wandb: Agent Starting Run: yd1kfvv4 with config:
+wandb: 	batch_size: 250
+wandb: 	drop_out: 0.25
+wandb: 	lr: 0.01
+wandb: 	optimizer: adam
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run curious-sweep-15
+wandb: ⭐️ View project at https://wandb.ai/amazonproject/Amazon-Reviews-v2
+wandb: 🧹 View sweep at https://wandb.ai/amazonproject/Amazon-Reviews-v2/sweeps/igrmn63w
+wandb: 🚀 View run at https://wandb.ai/amazonproject/Amazon-Reviews-v2/runs/yd1kfvv4
+wandb: Run data is saved locally in /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_221528-yd1kfvv4
+wandb: Run `wandb offline` to turn off syncing.
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).

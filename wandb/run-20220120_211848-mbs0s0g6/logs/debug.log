@@ -1,0 +1,150 @@
+2022-01-20 21:18:48,146 INFO    Thread-52 :224864 [wandb_setup.py:_flush():71] setting env: {'entity': 'amazonproject', 'project': 'Amazon-Reviews-v2', 'root_dir': '/zhome/4a/f/117237/Documents/MLOps_Amazon_review_project', 'run_id': 'mbs0s0g6', 'sweep_param_path': '/zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/sweep-igrmn63w/config-mbs0s0g6.yaml', 'sweep_id': 'igrmn63w'}
+2022-01-20 21:18:48,146 INFO    Thread-52 :224864 [wandb_setup.py:_flush():71] setting login settings: {}
+2022-01-20 21:18:48,146 INFO    Thread-52 :224864 [wandb_init.py:_log_setup():371] Logging user logs to /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_211848-mbs0s0g6/logs/debug.log
+2022-01-20 21:18:48,147 INFO    Thread-52 :224864 [wandb_init.py:_log_setup():372] Logging internal logs to /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_211848-mbs0s0g6/logs/debug-internal.log
+2022-01-20 21:18:48,147 INFO    Thread-52 :224864 [wandb_init.py:init():404] calling init triggers
+2022-01-20 21:18:48,147 INFO    Thread-52 :224864 [wandb_init.py:init():411] wandb.init called with sweep_config: {'batch_size': 200, 'drop_out': 0.35, 'lr': 0.001, 'optimizer': 'adam'}
+config: {}
+2022-01-20 21:18:48,147 INFO    Thread-52 :224864 [wandb_init.py:init():460] starting backend
+2022-01-20 21:18:48,147 INFO    Thread-52 :224864 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-01-20 21:18:48,156 INFO    Thread-52 :224864 [backend.py:ensure_launched():216] starting backend process...
+2022-01-20 21:18:48,172 INFO    Thread-52 :224864 [backend.py:ensure_launched():222] started backend process with pid: 233402
+2022-01-20 21:18:48,175 INFO    Thread-52 :224864 [wandb_init.py:init():469] backend started and connected
+2022-01-20 21:18:48,177 INFO    Thread-52 :224864 [wandb_run.py:_config_callback():956] config_cb None None {'batch_size': 200, 'drop_out': 0.35, 'lr': 0.001, 'optimizer': 'adam'}
+2022-01-20 21:18:48,179 INFO    Thread-52 :224864 [wandb_init.py:init():533] updated telemetry
+2022-01-20 21:18:48,237 INFO    Thread-52 :224864 [wandb_init.py:init():563] communicating current version
+2022-01-20 21:18:49,347 INFO    Thread-52 :224864 [wandb_init.py:init():568] got version response 
+2022-01-20 21:18:49,348 INFO    Thread-52 :224864 [wandb_init.py:init():578] communicating run to backend with 30 second timeout
+2022-01-20 21:18:49,578 INFO    Thread-52 :224864 [wandb_init.py:init():606] starting run threads in backend
+2022-01-20 21:18:49,649 INFO    Thread-52 :224864 [wandb_run.py:_console_start():1810] atexit reg
+2022-01-20 21:18:49,652 INFO    Thread-52 :224864 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.REDIRECT
+2022-01-20 21:18:49,652 INFO    Thread-52 :224864 [wandb_run.py:_redirect():1689] Redirecting console.
+2022-01-20 21:18:49,652 ERROR   Thread-52 :224864 [wandb_run.py:_redirect():1748] Failed to redirect.
+Traceback (most recent call last):
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/wandb_run.py", line 1741, in _redirect
+    out_redir.install()
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/lib/redirect.py", line 709, in install
+    _WSCH.add_fd(self._pipe_read_fd)
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/lib/redirect.py", line 659, in add_fd
+    self._register()
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/lib/redirect.py", line 644, in _register
+    old_handler = signal.signal(signal.SIGWINCH, lambda *_: None)
+  File "/usr/lib64/python3.6/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread
+2022-01-20 21:18:49,653 INFO    Thread-52 :224864 [wandb_init.py:init():633] run started, returning control to user process
+2022-01-20 21:32:42,320 INFO    Thread-52 :224864 [wandb_run.py:finish():1457] finishing run amazonproject/Amazon-Reviews-v2/mbs0s0g6
+2022-01-20 21:32:42,321 INFO    Thread-52 :224864 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 0
+2022-01-20 21:32:42,322 INFO    Thread-52 :224864 [wandb_run.py:_restore():1752] restore
+2022-01-20 21:32:42,332 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 809
+  total_bytes: 809
+}
+
+2022-01-20 21:32:42,637 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 809
+  total_bytes: 809
+}
+
+2022-01-20 21:32:43,015 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 3
+}
+pusher_stats {
+  uploaded_bytes: 809
+  total_bytes: 2399
+}
+
+2022-01-20 21:32:43,116 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 809
+  total_bytes: 2622
+}
+
+2022-01-20 21:32:43,219 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 809
+  total_bytes: 2622
+}
+
+2022-01-20 21:32:43,321 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2622
+  total_bytes: 2622
+}
+
+2022-01-20 21:32:43,423 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2622
+  total_bytes: 2622
+}
+
+2022-01-20 21:32:43,526 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2622
+  total_bytes: 2622
+}
+
+2022-01-20 21:32:43,627 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2622
+  total_bytes: 2622
+}
+
+2022-01-20 21:32:43,729 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2622
+  total_bytes: 2622
+}
+
+2022-01-20 21:32:43,831 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2622
+  total_bytes: 2622
+}
+
+2022-01-20 21:32:44,363 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2622
+  total_bytes: 2622
+}
+
+2022-01-20 21:32:44,831 INFO    Thread-52 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2622
+  total_bytes: 2622
+}
+local_info {
+}
+
+2022-01-20 21:32:45,934 INFO    Thread-52 :224864 [wandb_run.py:_append_history():2130] rendering history
+2022-01-20 21:32:45,935 INFO    Thread-52 :224864 [wandb_run.py:_append_summary():2085] rendering summary
+2022-01-20 21:32:45,935 INFO    Thread-52 :224864 [wandb_run.py:_append_files():2180] logging synced files

@@ -1,0 +1,24 @@
+{
+    "os": "Linux-3.10.0-1160.53.1.el7.x86_64-x86_64-with-redhat-7.7-Nitrogen",
+    "python": "3.6.8",
+    "heartbeatAt": "2022-01-20T17:58:00.087223",
+    "startedAt": "2022-01-20T17:57:58.259093",
+    "docker": null,
+    "gpu": "Tesla V100-PCIE-32GB",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "src/models/train_model.py",
+    "codePath": "src/models/train_model.py",
+    "git": {
+        "remote": "git@github.com:MaToeStudent/MLOps_Amazon_review_project.git",
+        "commit": "6b7493905bb252eb1ff76760bd58cbeffe2f020d"
+    },
+    "email": null,
+    "root": "/zhome/4a/f/117237/Documents/MLOps_Amazon_review_project",
+    "host": "n-62-11-14",
+    "username": "s164487",
+    "executable": "/usr/bin/python3"
+}

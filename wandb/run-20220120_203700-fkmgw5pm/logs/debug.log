@@ -1,0 +1,978 @@
+2022-01-20 20:37:01,000 INFO    Thread-37 :224864 [wandb_setup.py:_flush():71] setting env: {'entity': 'amazonproject', 'project': 'Amazon-Reviews-v2', 'root_dir': '/zhome/4a/f/117237/Documents/MLOps_Amazon_review_project', 'run_id': 'fkmgw5pm', 'sweep_param_path': '/zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/sweep-igrmn63w/config-fkmgw5pm.yaml', 'sweep_id': 'igrmn63w'}
+2022-01-20 20:37:01,000 INFO    Thread-37 :224864 [wandb_setup.py:_flush():71] setting login settings: {}
+2022-01-20 20:37:01,001 INFO    Thread-37 :224864 [wandb_init.py:_log_setup():371] Logging user logs to /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_203700-fkmgw5pm/logs/debug.log
+2022-01-20 20:37:01,001 INFO    Thread-37 :224864 [wandb_init.py:_log_setup():372] Logging internal logs to /zhome/4a/f/117237/Documents/MLOps_Amazon_review_project/wandb/run-20220120_203700-fkmgw5pm/logs/debug-internal.log
+2022-01-20 20:37:01,002 INFO    Thread-37 :224864 [wandb_init.py:init():404] calling init triggers
+2022-01-20 20:37:01,002 INFO    Thread-37 :224864 [wandb_init.py:init():411] wandb.init called with sweep_config: {'batch_size': 100, 'drop_out': 0.15, 'lr': 0.01, 'optimizer': 'sgd'}
+config: {}
+2022-01-20 20:37:01,002 INFO    Thread-37 :224864 [wandb_init.py:init():460] starting backend
+2022-01-20 20:37:01,002 INFO    Thread-37 :224864 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-01-20 20:37:01,011 INFO    Thread-37 :224864 [backend.py:ensure_launched():216] starting backend process...
+2022-01-20 20:37:01,027 INFO    Thread-37 :224864 [backend.py:ensure_launched():222] started backend process with pid: 230875
+2022-01-20 20:37:01,041 INFO    Thread-37 :224864 [wandb_init.py:init():469] backend started and connected
+2022-01-20 20:37:01,043 INFO    Thread-37 :224864 [wandb_run.py:_config_callback():956] config_cb None None {'batch_size': 100, 'drop_out': 0.15, 'lr': 0.01, 'optimizer': 'sgd'}
+2022-01-20 20:37:01,044 INFO    Thread-37 :224864 [wandb_init.py:init():533] updated telemetry
+2022-01-20 20:37:01,106 INFO    Thread-37 :224864 [wandb_init.py:init():563] communicating current version
+2022-01-20 20:37:02,176 INFO    Thread-37 :224864 [wandb_init.py:init():568] got version response 
+2022-01-20 20:37:02,177 INFO    Thread-37 :224864 [wandb_init.py:init():578] communicating run to backend with 30 second timeout
+2022-01-20 20:37:02,398 INFO    Thread-37 :224864 [wandb_init.py:init():606] starting run threads in backend
+2022-01-20 20:37:02,470 INFO    Thread-37 :224864 [wandb_run.py:_console_start():1810] atexit reg
+2022-01-20 20:37:02,473 INFO    Thread-37 :224864 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.REDIRECT
+2022-01-20 20:37:02,473 INFO    Thread-37 :224864 [wandb_run.py:_redirect():1689] Redirecting console.
+2022-01-20 20:37:02,473 ERROR   Thread-37 :224864 [wandb_run.py:_redirect():1748] Failed to redirect.
+Traceback (most recent call last):
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/wandb_run.py", line 1741, in _redirect
+    out_redir.install()
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/lib/redirect.py", line 709, in install
+    _WSCH.add_fd(self._pipe_read_fd)
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/lib/redirect.py", line 659, in add_fd
+    self._register()
+  File "/zhome/4a/f/117237/.local/lib/python3.6/site-packages/wandb/sdk/lib/redirect.py", line 644, in _register
+    old_handler = signal.signal(signal.SIGWINCH, lambda *_: None)
+  File "/usr/lib64/python3.6/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread
+2022-01-20 20:37:02,474 INFO    Thread-37 :224864 [wandb_init.py:init():633] run started, returning control to user process
+2022-01-20 20:38:17,360 ERROR   Thread-1  :224864 [internal_api.py:execute():144] 502 response executing GraphQL.
+2022-01-20 20:38:17,360 ERROR   Thread-1  :224864 [internal_api.py:execute():145] 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>502 Server Error</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Server Error</h1>
+<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>
+<h2></h2>
+</body></html>
+
+2022-01-20 20:51:08,745 INFO    Thread-37 :224864 [wandb_run.py:finish():1457] finishing run amazonproject/Amazon-Reviews-v2/fkmgw5pm
+2022-01-20 20:51:08,746 INFO    Thread-37 :224864 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 0
+2022-01-20 20:51:08,747 INFO    Thread-37 :224864 [wandb_run.py:_restore():1752] restore
+2022-01-20 20:51:08,756 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 788
+  total_bytes: 788
+}
+
+2022-01-20 20:51:09,001 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 788
+  total_bytes: 788
+}
+
+2022-01-20 20:51:09,934 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 3
+}
+pusher_stats {
+  uploaded_bytes: 788
+  total_bytes: 2181
+}
+
+2022-01-20 20:51:10,036 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 788
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:10,138 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 788
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:10,240 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:10,342 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:10,443 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:10,545 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:10,647 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:10,749 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:10,850 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:10,952 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:11,056 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:11,157 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:11,259 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:11,360 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:11,462 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:11,563 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:11,665 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:11,767 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:11,868 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:11,970 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:12,073 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:12,175 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:12,276 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:12,377 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:12,478 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:12,580 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:12,681 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:12,782 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:12,883 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:12,985 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:13,089 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:13,190 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:13,291 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:13,392 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:13,494 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:13,595 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:13,696 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:13,797 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:13,899 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:14,000 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:14,105 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:14,206 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:14,307 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:14,409 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:14,511 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:14,612 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:14,713 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:14,815 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:14,916 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:15,018 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:15,122 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:15,223 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:15,324 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:15,426 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:15,527 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:15,628 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:15,730 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:15,831 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:15,933 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:16,034 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:16,138 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:16,240 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:16,341 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:16,443 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:16,544 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:16,646 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:16,747 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:16,849 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:16,950 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:17,052 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:17,155 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:17,256 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:17,358 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:17,459 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:17,561 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:17,662 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:17,763 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:17,865 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:17,966 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:18,068 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:18,172 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:18,273 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:18,374 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:18,476 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:18,577 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:18,678 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:18,780 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:18,881 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:18,982 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:19,084 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:19,188 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:19,289 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:19,390 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:19,491 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:19,593 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:19,695 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:19,796 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:19,898 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:19,999 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:20,101 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:20,204 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:20,305 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:20,406 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:20,508 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:20,611 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 1545
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:20,713 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2405
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:20,814 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2405
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:20,915 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2405
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:21,016 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2405
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:21,118 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2405
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:21,676 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2405
+  total_bytes: 2405
+}
+
+2022-01-20 20:51:22,141 INFO    Thread-37 :224864 [wandb_run.py:_wait_for_finish():1912] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 2405
+  total_bytes: 2405
+}
+local_info {
+}
+
+2022-01-20 20:51:23,249 INFO    Thread-37 :224864 [wandb_run.py:_append_history():2130] rendering history
+2022-01-20 20:51:23,250 INFO    Thread-37 :224864 [wandb_run.py:_append_summary():2085] rendering summary
+2022-01-20 20:51:23,250 INFO    Thread-37 :224864 [wandb_run.py:_append_files():2180] logging synced files
