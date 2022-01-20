@@ -16,13 +16,13 @@ from transformers import BertModel
 from torch.profiler import profile, record_function, ProfilerActivity,tensorboard_trace_handler
 
 sys.path.insert(0, os.getcwd() + "/src/data/")
-from make_dataset import AmazonData
+from AmazonData import AmazonData
 
 # Setting seed
 RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 torch.manual_seed(RANDOM_SEED)
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 sweep_config = {"method": "random"}
 

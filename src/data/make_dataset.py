@@ -11,15 +11,13 @@ import torch
 import wget
 from dotenv import find_dotenv, load_dotenv
 from sklearn.model_selection import train_test_split
-from torch.utils.data import Dataset
 from transformers import BertTokenizer
+from AmazonData import AmazonData
 
 RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 torch.manual_seed(RANDOM_SEED)
 
-
-#
 def parse(path):
     g = gzip.open(path, "rb")
     for l in g:
@@ -48,37 +46,6 @@ def to_sentiment(rating):
 class_names = ["negative", "neutral", "positive"]
 
 
-class AmazonData(Dataset):
-    def __init__(self, reviews, targets, tokenizer, max_length):
-        self.reviews = reviews
-        self.targets = targets
-        self.tokenizer = tokenizer
-        self.max_length = max_length
-
-    def __len__(self):
-        return len(self.reviews)
-
-    def __getitem__(self, idx):
-        review = str(self.reviews[idx])
-        target = self.targets[idx]
-        encoding = self.tokenizer.encode_plus(
-            review,
-            add_special_tokens=True,
-            max_length=self.max_length,
-            return_token_type_ids=False,
-            pad_to_max_length=True,
-            return_attention_mask=True,
-            return_tensors="pt",
-            truncation=True,
-        )
-        return {
-            "review_text": review,
-            "input_ids": encoding["input_ids"].flatten(),
-            "attention_mask": encoding["attention_mask"].flatten(),
-            "targets": torch.tensor(target, dtype=torch.long),
-        }
-
-
 @click.command()
 @click.argument("input_filepath", type=click.Path())
 @click.argument("output_filepath", type=click.Path())
@@ -96,8 +63,8 @@ def main(input_filepath, output_filepath):
         filepath = wget.download(url, out=input_filepath)
         print(filepath, "Download finished!")
     df = getDF(input_filepath + "/reviews_Amazon_Instant_Video_5.json.gz")
-    data = df["reviewText"].to_numpy()[:100]
-    labels = df["overall"].apply(to_sentiment).to_list()[:100]
+    data = df["reviewText"].to_numpy()
+    labels = df["overall"].apply(to_sentiment).to_list()
     X_train, X_test, Y_train, Y_test = train_test_split(
         data, labels, train_size=0.75, test_size=0.25, random_state=42, shuffle=True
     )
