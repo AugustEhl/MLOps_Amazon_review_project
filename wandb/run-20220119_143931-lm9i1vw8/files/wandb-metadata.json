@@ -1,0 +1,24 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.8.3",
+    "heartbeatAt": "2022-01-19T13:39:35.031802",
+    "startedAt": "2022-01-19T13:39:31.273312",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "data/processed/train.pth"
+    ],
+    "state": "running",
+    "program": "src/models/train_model.py",
+    "codePath": "src/models/train_model.py",
+    "git": {
+        "remote": "https://github.com/AugustEhl/MLOps_Amazon_review_project",
+        "commit": "06613e4e1ccd75866eb086f43b02428c68d7de81"
+    },
+    "email": "s205980@student.dtu.dk",
+    "root": "/Users/ewelina/Desktop/MLOps_Amazon_review_project",
+    "host": "Ewelinas-MacBook-Air.local",
+    "username": "ewelina",
+    "executable": "/opt/anaconda3/bin/python"
+}
