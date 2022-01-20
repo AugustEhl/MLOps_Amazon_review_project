@@ -13,16 +13,11 @@ from torch import nn, optim
 from torch.utils.data import DataLoader
 from torch.nn.parallel import DistributedDataParallel as DDP
 from transformers import BertModel
-from torch.profiler import profile, record_function, ProfilerActivity,tensorboard_trace_handler
-import torch.distributed as dist
 
 sys.path.insert(0, os.getcwd() + "/src/data/")
 from AmazonData import AmazonData
 
 # Setting seed
-RANDOM_SEED = 42
-np.random.seed(RANDOM_SEED)
-torch.manual_seed(RANDOM_SEED)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 sweep_config = {"method": "random"}
@@ -40,10 +35,6 @@ sweep_id = wandb.sweep(sweep_config, project="Amazon-Reviews", entity="amazonpro
 
 table = wandb.Table(columns=["ReviewRating", "PredictedRating"])
 
-
-RANDOM_SEED = 42
-np.random.seed(RANDOM_SEED)
-torch.manual_seed(RANDOM_SEED)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 loss_fn = nn.CrossEntropyLoss().to(device)
 
@@ -65,7 +56,7 @@ class SentimentClassifier(nn.Module):
 loss_fn = nn.CrossEntropyLoss().to(device)
 
 def build_dataLoader(data, batch_size):
-    return DataLoader(data, batch_size=batch_size, shuffle=True, num_workers=1)
+    return DataLoader(data, batch_size=batch_size, shuffle=True)
 
 def build_optimizer(opt, model, lr):
     if opt == 'adam':
@@ -83,8 +74,7 @@ def train_epoch(model, trainloader, optimizer):
         attention_mask = data["attention_mask"].to(device)
         labels = data["targets"].to(device)
         optimizer.zero_grad()
-        with record_function("model_inference"):
-            output = model(input_ids=input_ids, attention_mask=attention_mask)
+        output = model(input_ids=input_ids, attention_mask=attention_mask)
         loss = loss_fn(output, labels)
         running_loss += loss.item()
 
@@ -137,26 +127,20 @@ def train(config=None):
         optimizer = build_optimizer(config.optimizer, model, config.lr)
         num_epochs = 3
         model.train()
-        with profile(
-            activities=[ProfilerActivity.CPU],
-            record_shapes=True,
-            on_trace_ready=tensorboard_trace_handler('src/visualizations/trace_hanlder_project.pt.trace.json')
-            ) as prof:
-            for i in range(num_epochs):
-                print(f"Epoch {i+1} of {num_epochs}")
-                
-                avg_loss, avg_acc = train_epoch(model, trainloader, optimizer)
-                print(
-                    f"Epoch {i+1} loss: {avg_loss} \tEpoch acc: {avg_acc}"
-                )
-                wandb.log(
-                    {
-                        "Loss": avg_loss,
-                        "Accuracy": avg_acc,
-                        "Classes": table,
-                    }
-                )
-            prof.export_chrome_trace("trace_project.json")
+        for i in range(num_epochs):
+            print(f"Epoch {i+1} of {num_epochs}")
+            
+            avg_loss, avg_acc = train_epoch(model, trainloader, optimizer)
+            print(
+                f"Epoch {i+1} loss: {avg_loss} \tEpoch acc: {avg_acc}"
+            )
+            wandb.log(
+                {
+                    "Loss": avg_loss,
+                    "Accuracy": avg_acc,
+                    "Classes": table,
+                }
+            )
         torch.save(
             model,
             f"models/model_opt{config.optimizer}_bs{config.batch_size}_do{config.drop_out}_lr{config.lr}.pth",
@@ -164,4 +148,4 @@ def train(config=None):
 
 
 if __name__ == "__main__":
-    wandb.agent(sweep_id, train, count=1)
+    wandb.agent(sweep_id, train, count=5)
