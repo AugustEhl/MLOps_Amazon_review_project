@@ -29,7 +29,6 @@
 nvidia-smi
 # Load the cuda module
 module load cuda/10.2
-module load python3/3.9.6
 
 /appl/cuda/10.2/samples/NVIDIA_CUDA-10.2_Samples/bin/x86_64/linux/release/deviceQuery
 

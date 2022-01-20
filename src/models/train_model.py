@@ -14,6 +14,7 @@ from torch.utils.data import DataLoader
 from torch.nn.parallel import DistributedDataParallel as DDP
 from transformers import BertModel
 from torch.profiler import profile, record_function, ProfilerActivity,tensorboard_trace_handler
+import torch.distributed as dist
 
 sys.path.insert(0, os.getcwd() + "/src/data/")
 from AmazonData import AmazonData
@@ -43,7 +44,8 @@ table = wandb.Table(columns=["ReviewRating", "PredictedRating"])
 RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 torch.manual_seed(RANDOM_SEED)
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.cuda.device("cuda" if torch.cuda.is_available() else "cpu")
+torch.cuda.manual_seed_all(RANDOM_SEED)
 loss_fn = nn.CrossEntropyLoss().to(device)
 
 
@@ -125,6 +127,8 @@ def train(config=None):
         - models/final_model.pth
 
     """
+    dist.init_process_group(backend='nccl', init_method='env://')
+    torch.cuda.set_device(2)
     with wandb.init(config=config):
         config = wandb.config
         print("Initializing training")
