@@ -1,0 +1,87 @@
+2022-01-19 17:47:28,806 INFO    MainThread:595 [internal.py:wandb_internal():87] W&B internal server running at pid: 595, started at: 2022-01-19 17:47:28.806036
+2022-01-19 17:47:28,811 INFO    WriterThread:595 [datastore.py:open_for_write():77] open: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/run-3wgkdc6b.wandb
+2022-01-19 17:47:28,811 DEBUG   HandlerThread:595 [handler.py:handle_request():130] handle_request: check_version
+2022-01-19 17:47:28,814 DEBUG   SenderThread:595 [sender.py:send():234] send: header
+2022-01-19 17:47:28,814 DEBUG   SenderThread:595 [sender.py:send_request():248] send_request: check_version
+2022-01-19 17:47:28,945 DEBUG   SenderThread:595 [sender.py:send():234] send: run
+2022-01-19 17:47:29,211 DEBUG   HandlerThread:595 [handler.py:handle_request():130] handle_request: run_start
+2022-01-19 17:47:29,216 INFO    SenderThread:595 [dir_watcher.py:__init__():169] watching files in: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files
+2022-01-19 17:47:29,216 INFO    SenderThread:595 [sender.py:_start_run_threads():804] run started: 3wgkdc6b with start time 1642610846
+2022-01-19 17:47:29,216 DEBUG   SenderThread:595 [sender.py:send():234] send: summary
+2022-01-19 17:47:29,222 INFO    SenderThread:595 [sender.py:_save_file():939] saving file wandb-summary.json with policy end
+2022-01-19 17:47:29,224 DEBUG   HandlerThread:595 [meta.py:__init__():40] meta init
+2022-01-19 17:47:29,224 DEBUG   HandlerThread:595 [meta.py:__init__():54] meta init done
+2022-01-19 17:47:29,224 DEBUG   HandlerThread:595 [meta.py:probe():214] probe
+2022-01-19 17:47:29,227 DEBUG   HandlerThread:595 [meta.py:_setup_git():204] setup git
+2022-01-19 17:47:29,259 DEBUG   HandlerThread:595 [meta.py:_setup_git():211] setup git done
+2022-01-19 17:47:29,260 DEBUG   HandlerThread:595 [meta.py:_save_pip():58] save pip
+2022-01-19 17:47:29,261 DEBUG   HandlerThread:595 [meta.py:_save_pip():72] save pip done
+2022-01-19 17:47:29,261 DEBUG   HandlerThread:595 [meta.py:_save_conda():79] save conda
+2022-01-19 17:47:30,215 INFO    Thread-8  :595 [dir_watcher.py:_on_file_created():217] file/dir created: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/requirements.txt
+2022-01-19 17:47:30,216 INFO    Thread-8  :595 [dir_watcher.py:_on_file_created():217] file/dir created: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/conda-environment.yaml
+2022-01-19 17:47:30,217 INFO    Thread-8  :595 [dir_watcher.py:_on_file_created():217] file/dir created: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/wandb-summary.json
+2022-01-19 17:47:31,096 DEBUG   HandlerThread:595 [meta.py:_save_conda():89] save conda done
+2022-01-19 17:47:31,096 DEBUG   HandlerThread:595 [meta.py:probe():252] probe done
+2022-01-19 17:47:31,211 INFO    Thread-8  :595 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/conda-environment.yaml
+2022-01-19 17:47:31,211 INFO    Thread-8  :595 [dir_watcher.py:_on_file_created():217] file/dir created: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/wandb-metadata.json
+2022-01-19 17:47:31,428 DEBUG   SenderThread:595 [sender.py:send():234] send: files
+2022-01-19 17:47:31,428 INFO    SenderThread:595 [sender.py:_save_file():939] saving file wandb-metadata.json with policy now
+2022-01-19 17:47:31,440 DEBUG   HandlerThread:595 [handler.py:handle_request():130] handle_request: stop_status
+2022-01-19 17:47:31,441 DEBUG   SenderThread:595 [sender.py:send_request():248] send_request: stop_status
+2022-01-19 17:47:32,036 INFO    Thread-11 :595 [upload_job.py:push():137] Uploaded file /tmp/tmp2r46lu_twandb/1ewnapen-wandb-metadata.json
+2022-01-19 17:47:32,211 INFO    Thread-8  :595 [dir_watcher.py:_on_file_created():217] file/dir created: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/output.log
+2022-01-19 17:47:46,644 DEBUG   HandlerThread:595 [handler.py:handle_request():130] handle_request: stop_status
+2022-01-19 17:47:46,671 DEBUG   SenderThread:595 [sender.py:send_request():248] send_request: stop_status
+2022-01-19 17:47:57,670 DEBUG   SenderThread:595 [sender.py:send():234] send: stats
+2022-01-19 17:48:02,247 DEBUG   HandlerThread:595 [handler.py:handle_request():130] handle_request: stop_status
+2022-01-19 17:48:02,247 DEBUG   SenderThread:595 [sender.py:send_request():248] send_request: stop_status
+2022-01-19 17:48:17,541 DEBUG   HandlerThread:595 [handler.py:handle_request():130] handle_request: stop_status
+2022-01-19 17:48:17,644 DEBUG   SenderThread:595 [sender.py:send_request():248] send_request: stop_status
+2022-01-19 17:48:19,899 DEBUG   SenderThread:595 [sender.py:send():234] send: history
+2022-01-19 17:48:20,022 DEBUG   SenderThread:595 [sender.py:send():234] send: summary
+2022-01-19 17:48:20,030 INFO    SenderThread:595 [sender.py:_save_file():939] saving file wandb-summary.json with policy end
+2022-01-19 17:48:21,344 INFO    Thread-8  :595 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/wandb-summary.json
+2022-01-19 17:48:32,224 DEBUG   SenderThread:595 [sender.py:send():234] send: history
+2022-01-19 17:48:32,224 DEBUG   SenderThread:595 [sender.py:send():234] send: summary
+2022-01-19 17:48:32,225 INFO    SenderThread:595 [sender.py:_save_file():939] saving file wandb-summary.json with policy end
+2022-01-19 17:48:32,246 DEBUG   SenderThread:595 [sender.py:send():234] send: stats
+2022-01-19 17:48:32,930 DEBUG   HandlerThread:595 [handler.py:handle_request():130] handle_request: stop_status
+2022-01-19 17:48:32,931 DEBUG   SenderThread:595 [sender.py:send_request():248] send_request: stop_status
+2022-01-19 17:48:33,208 INFO    Thread-8  :595 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/wandb-summary.json
+2022-01-19 17:48:35,714 DEBUG   SenderThread:595 [sender.py:send():234] send: history
+2022-01-19 17:48:35,715 DEBUG   SenderThread:595 [sender.py:send():234] send: summary
+2022-01-19 17:48:35,716 INFO    SenderThread:595 [sender.py:_save_file():939] saving file wandb-summary.json with policy end
+2022-01-19 17:48:36,211 INFO    Thread-8  :595 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/wandb-summary.json
+2022-01-19 17:48:39,007 DEBUG   SenderThread:595 [sender.py:send():234] send: history
+2022-01-19 17:48:39,007 DEBUG   SenderThread:595 [sender.py:send():234] send: summary
+2022-01-19 17:48:39,008 INFO    SenderThread:595 [sender.py:_save_file():939] saving file wandb-summary.json with policy end
+2022-01-19 17:48:39,213 INFO    Thread-8  :595 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/wandb-summary.json
+2022-01-19 17:48:39,934 WARNING MainThread:595 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2022-01-19 17:48:40,752 DEBUG   HandlerThread:595 [handler.py:handle_request():130] handle_request: log_artifact
+2022-01-19 17:48:40,752 DEBUG   SenderThread:595 [sender.py:send_request():248] send_request: log_artifact
+2022-01-19 17:48:40,941 WARNING MainThread:595 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2022-01-19 17:48:40,941 ERROR   MainThread:595 [internal.py:wandb_internal():149] Internal process interrupted.
+2022-01-19 17:48:41,216 INFO    Thread-8  :595 [dir_watcher.py:_on_file_created():217] file/dir created: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/media/table/Classes_4_f88278c9ca3f5d816fb2.table.json
+2022-01-19 17:48:41,216 INFO    Thread-8  :595 [dir_watcher.py:_on_file_created():217] file/dir created: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/media/table
+2022-01-19 17:48:41,217 INFO    Thread-8  :595 [dir_watcher.py:_on_file_created():217] file/dir created: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/media
+2022-01-19 17:48:41,783 INFO    WriterThread:595 [datastore.py:close():281] close: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/run-3wgkdc6b.wandb
+2022-01-19 17:48:42,481 INFO    Thread-13 :595 [upload_job.py:push():95] Uploaded file /home/s133583/.cache/wandb/artifacts/obj/md5/31/49a750849807b859acd632192a016b
+2022-01-19 17:48:43,484 INFO    SenderThread:595 [sender.py:send_request_log_artifact():968] logged artifact run-3wgkdc6b-Classes - {'id': 'QXJ0aWZhY3Q6NjYyNzkyNjc=', 'digest': 'c589603bd4bb99f9218e954125a2ae25', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjk3MzE0MDI=', 'latestArtifact': None}, 'version': 'latest'}
+2022-01-19 17:48:43,484 INFO    SenderThread:595 [sender.py:finish():1070] shutting down sender
+2022-01-19 17:48:43,484 INFO    SenderThread:595 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-01-19 17:48:44,219 INFO    SenderThread:595 [dir_watcher.py:finish():313] scan: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files
+2022-01-19 17:48:44,220 INFO    SenderThread:595 [dir_watcher.py:finish():327] scan save: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/output.log output.log
+2022-01-19 17:48:44,220 INFO    SenderThread:595 [dir_watcher.py:finish():327] scan save: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/conda-environment.yaml conda-environment.yaml
+2022-01-19 17:48:44,220 INFO    SenderThread:595 [dir_watcher.py:finish():327] scan save: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/config.yaml config.yaml
+2022-01-19 17:48:44,220 INFO    SenderThread:595 [dir_watcher.py:finish():327] scan save: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/wandb-metadata.json wandb-metadata.json
+2022-01-19 17:48:44,220 INFO    SenderThread:595 [dir_watcher.py:finish():327] scan save: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/requirements.txt requirements.txt
+2022-01-19 17:48:44,221 INFO    SenderThread:595 [dir_watcher.py:finish():327] scan save: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/wandb-summary.json wandb-summary.json
+2022-01-19 17:48:44,237 INFO    SenderThread:595 [dir_watcher.py:finish():327] scan save: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/media/table/Classes_4_f88278c9ca3f5d816fb2.table.json media/table/Classes_4_f88278c9ca3f5d816fb2.table.json
+2022-01-19 17:48:44,238 INFO    SenderThread:595 [file_pusher.py:finish():177] shutting down file pusher
+2022-01-19 17:48:44,239 INFO    SenderThread:595 [file_pusher.py:join():182] waiting for file pusher
+2022-01-19 17:48:44,807 INFO    Thread-14 :595 [upload_job.py:push():137] Uploaded file /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/conda-environment.yaml
+2022-01-19 17:48:44,817 INFO    Thread-15 :595 [upload_job.py:push():137] Uploaded file /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/config.yaml
+2022-01-19 17:48:44,854 INFO    Thread-18 :595 [upload_job.py:push():137] Uploaded file /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/media/table/Classes_4_f88278c9ca3f5d816fb2.table.json
+2022-01-19 17:48:44,892 INFO    Thread-16 :595 [upload_job.py:push():137] Uploaded file /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/requirements.txt
+2022-01-19 17:48:44,894 INFO    Thread-17 :595 [upload_job.py:push():137] Uploaded file /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/files/wandb-summary.json
+2022-01-19 17:48:45,473 INFO    MainThread:595 [internal.py:handle_exit():77] Internal process exited

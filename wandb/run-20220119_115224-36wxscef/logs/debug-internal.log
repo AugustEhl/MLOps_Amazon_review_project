@@ -1,0 +1,8 @@
+2022-01-19 11:53:25,280 INFO    MainThread:9602 [internal.py:wandb_internal():87] W&B internal server running at pid: 9602, started at: 2022-01-19 11:53:25.279678
+2022-01-19 11:53:25,292 DEBUG   HandlerThread:9602 [handler.py:handle_request():130] handle_request: check_version
+2022-01-19 11:53:25,293 DEBUG   HandlerThread:9602 [handler.py:handle_request():130] handle_request: shutdown
+2022-01-19 11:53:26,247 INFO    WriterThread:9602 [datastore.py:open_for_write():77] open: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_115224-36wxscef/run-36wxscef.wandb
+2022-01-19 11:53:26,248 INFO    HandlerThread:9602 [handler.py:finish():731] shutting down handler
+2022-01-19 11:53:26,249 INFO    WriterThread:9602 [datastore.py:close():281] close: /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_115224-36wxscef/run-36wxscef.wandb
+2022-01-19 11:53:26,252 INFO    SenderThread:9602 [sender.py:finish():1070] shutting down sender
+2022-01-19 11:53:26,298 INFO    MainThread:9602 [internal.py:handle_exit():77] Internal process exited

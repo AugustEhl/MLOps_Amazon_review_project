@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+    "python": "3.9.7",
+    "heartbeatAt": "2022-01-19T16:55:30.539132",
+    "startedAt": "2022-01-19T16:55:28.640396",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "data/processed/train.pth"
+    ],
+    "state": "running",
+    "program": "/home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/src/models/train_model.py",
+    "codePath": "src/models/train_model.py",
+    "git": {
+        "remote": "git@github.com:AugustEhl/MLOps_Amazon_review_project.git",
+        "commit": "59de769f4e41ce671cb6d93b7045d092eeb889f1"
+    },
+    "email": "s133583@student.dtu.dk",
+    "root": "/home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project",
+    "host": "LAPTOP-Q3MOTLLL",
+    "username": "s133583",
+    "executable": "/home/s133583/anaconda3/envs/ml_ops_proj/bin/python"
+}

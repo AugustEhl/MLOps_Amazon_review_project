@@ -1,0 +1,38 @@
+2022-01-19 17:47:26,032 INFO    Thread-7  :518 [wandb_setup.py:_flush():71] setting env: {'entity': 'amazonproject', 'project': 'Amazon-Reviews', 'root_dir': '/home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project', 'run_id': '3wgkdc6b', 'sweep_param_path': '/home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/sweep-c8rh8i9p/config-3wgkdc6b.yaml', 'sweep_id': 'c8rh8i9p'}
+2022-01-19 17:47:26,032 INFO    Thread-7  :518 [wandb_setup.py:_flush():71] setting login settings: {}
+2022-01-19 17:47:26,032 INFO    Thread-7  :518 [wandb_init.py:_log_setup():371] Logging user logs to /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/logs/debug.log
+2022-01-19 17:47:26,033 INFO    Thread-7  :518 [wandb_init.py:_log_setup():372] Logging internal logs to /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_174725-3wgkdc6b/logs/debug-internal.log
+2022-01-19 17:47:26,034 INFO    Thread-7  :518 [wandb_init.py:init():404] calling init triggers
+2022-01-19 17:47:26,034 INFO    Thread-7  :518 [wandb_init.py:init():409] wandb.init called with sweep_config: {'batch_size': 20, 'drop_out': 0.15, 'epochs': 1, 'lr': 0.01, 'num_workers': 4, 'optimizer': 'adam'}
+config: {}
+2022-01-19 17:47:26,034 INFO    Thread-7  :518 [wandb_init.py:init():460] starting backend
+2022-01-19 17:47:26,035 INFO    Thread-7  :518 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-01-19 17:47:26,052 INFO    Thread-7  :518 [backend.py:ensure_launched():216] starting backend process...
+2022-01-19 17:47:26,085 INFO    Thread-7  :518 [backend.py:ensure_launched():221] started backend process with pid: 595
+2022-01-19 17:47:26,090 INFO    Thread-7  :518 [wandb_init.py:init():469] backend started and connected
+2022-01-19 17:47:26,106 INFO    Thread-7  :518 [wandb_run.py:_config_callback():956] config_cb None None {'batch_size': 20, 'drop_out': 0.15, 'epochs': 1, 'lr': 0.01, 'num_workers': 4, 'optimizer': 'adam'}
+2022-01-19 17:47:26,123 INFO    Thread-7  :518 [wandb_init.py:init():533] updated telemetry
+2022-01-19 17:47:26,214 INFO    Thread-7  :518 [wandb_init.py:init():563] communicating current version
+2022-01-19 17:47:28,942 INFO    Thread-7  :518 [wandb_init.py:init():568] got version response 
+2022-01-19 17:47:28,942 INFO    Thread-7  :518 [wandb_init.py:init():578] communicating run to backend with 30 second timeout
+2022-01-19 17:47:29,209 INFO    Thread-7  :518 [wandb_init.py:init():606] starting run threads in backend
+2022-01-19 17:47:31,440 INFO    Thread-7  :518 [wandb_run.py:_console_start():1810] atexit reg
+2022-01-19 17:47:31,442 INFO    Thread-7  :518 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.REDIRECT
+2022-01-19 17:47:31,442 INFO    Thread-7  :518 [wandb_run.py:_redirect():1689] Redirecting console.
+2022-01-19 17:47:31,454 ERROR   Thread-7  :518 [wandb_run.py:_redirect():1748] Failed to redirect.
+Traceback (most recent call last):
+  File "/home/s133583/anaconda3/envs/ml_ops_proj/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1741, in _redirect
+    out_redir.install()
+  File "/home/s133583/anaconda3/envs/ml_ops_proj/lib/python3.9/site-packages/wandb/sdk/lib/redirect.py", line 709, in install
+    _WSCH.add_fd(self._pipe_read_fd)
+  File "/home/s133583/anaconda3/envs/ml_ops_proj/lib/python3.9/site-packages/wandb/sdk/lib/redirect.py", line 659, in add_fd
+    self._register()
+  File "/home/s133583/anaconda3/envs/ml_ops_proj/lib/python3.9/site-packages/wandb/sdk/lib/redirect.py", line 644, in _register
+    old_handler = signal.signal(signal.SIGWINCH, lambda *_: None)
+  File "/home/s133583/anaconda3/envs/ml_ops_proj/lib/python3.9/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread of the main interpreter
+2022-01-19 17:47:31,463 INFO    Thread-7  :518 [wandb_init.py:init():633] run started, returning control to user process
+2022-01-19 17:48:39,995 INFO    Thread-7  :518 [wandb_run.py:finish():1457] finishing run amazonproject/Amazon-Reviews/3wgkdc6b
+2022-01-19 17:48:39,998 INFO    Thread-7  :518 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 1
+2022-01-19 17:48:41,369 INFO    Thread-7  :518 [wandb_run.py:_restore():1752] restore

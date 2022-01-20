@@ -1,0 +1,4 @@
+name: ml_ops_proj
+channels:
+  - defaults
+prefix: /home/s133583/anaconda3/envs/ml_ops_proj/envs/ml_ops_proj

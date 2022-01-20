@@ -1,0 +1,74 @@
+### Steps for Docker (everything is executed from root of project)
+
+# 1. Move dockerfiles to root
+mv notebooks/docker/* .
+
+# 2. build trainer
+docker build -f trainer.dockerfile . -t trainer:latest
+
+# 3. confirm image exists by doing
+docker images
+
+# 4. Check that training starts
+docker run --name experiment1 trainer:latest
+
+        ## Optional
+        # To copy a file between container and local laptop do
+        docker cp {container_name}:{dir_path}/{file_name} {local_dir_path}/{local_file_name}
+
+        # or if we want the trained model transferred directly do
+        docker run --name {container_name} -v %cd%/models:/models/ trainer:latest
+
+        # To view how files are organized in container do
+        docker run -it --entrypoint sh {image_name}:{image_name}
+
+# 5. build predicter
+docker build -f predict.dockerfile . -t predict:latest
+
+# 6. confirm image exists by doing
+docker images
+
+# 7. Check that predictions works
+docker run --name predict --rm \
+  -v %cd%/trained_model.pt:/models/trained_model.pt \  # mount trained model file
+  -v %cd%/data/example_images.npy:/example_images.npy \  # mount data we want to predict on
+  predict:latest \
+  ../../models/trained_model.pt \  # argument to script, path relative to script location in container
+  ../../example_images.npy
+
+## GPU
+# 8. To run on GPU, pull one of these images (version of pytorch can be changed)
+docker pull anibali/pytorch:1.8.1-cuda11.1  # pytorch 1.8.1 with cuda 11.1
+docker pull anibali/pytorch  # get the latest version of pytorch with
+
+# 9. Execute following cmd to run script.py on GPU (I assume main.py would be your main.py on the cloud e.g.) 
+docker run --rm -it --init \
+   --gpus=all \  # only if cuda version
+   --ipc=host \  # only if using multiprocessing
+   --user="$(id -u):$(id -g)" \  # optional, useful for writing files with correct ownership
+   --volume="$PWD:/app" \  # optional, mount additional files
+   {pulled_docker_image_name} python3 main.py
+
+# 10. To build our own images for GPU change some lines in the dockfile:
+    FROM python:3.7-slim 
+    #to this
+    FROM anibali/pytorch:1.8.1-cuda11.1-ubuntu20.04  # or whatever image you want to use (https://github.com/anibali/docker-pytorch/tree/master/dockerfiles)
+
+    #Remove flw. lines as well:
+    # install python 
+    RUN apt update && \
+        apt install --no-install-recommends -y build-essential gcc && \
+        apt clean && rm -rf /var/lib/apt/lists/*
+
+    # Also change workdir
+    WORKDIR /
+    # to this
+    WORKDIR / app/ -> WORKDIR /app
+
+    #( to ensure you don't install Pytorch again you probably need to remove it from the requirements file)
+    
+
+
+
+
+

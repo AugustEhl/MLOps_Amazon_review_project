@@ -1,0 +1,188 @@
+2022-01-19 17:55:28,644 INFO    Thread-2  :1072 [wandb_setup.py:_flush():71] setting env: {'entity': 'amazonproject', 'project': 'Amazon-Reviews', 'root_dir': '/home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project', 'sweep_id': 'pfocnmzj', 'run_id': 'saudohz1', 'sweep_param_path': '/home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/sweep-pfocnmzj/config-saudohz1.yaml'}
+2022-01-19 17:55:28,644 INFO    Thread-2  :1072 [wandb_setup.py:_flush():71] setting login settings: {}
+2022-01-19 17:55:28,645 INFO    Thread-2  :1072 [wandb_init.py:_log_setup():371] Logging user logs to /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_175528-saudohz1/logs/debug.log
+2022-01-19 17:55:28,645 INFO    Thread-2  :1072 [wandb_init.py:_log_setup():372] Logging internal logs to /home/s133583/DTU/courses/ml_ops/project/MLOps_Amazon_review_project/wandb/run-20220119_175528-saudohz1/logs/debug-internal.log
+2022-01-19 17:55:28,645 INFO    Thread-2  :1072 [wandb_init.py:init():404] calling init triggers
+2022-01-19 17:55:28,645 INFO    Thread-2  :1072 [wandb_init.py:init():409] wandb.init called with sweep_config: {'batch_size': 20, 'drop_out': 0.15, 'epochs': 3, 'lr': 0.01, 'optimizer': 'sgd'}
+config: {}
+2022-01-19 17:55:28,645 INFO    Thread-2  :1072 [wandb_init.py:init():460] starting backend
+2022-01-19 17:55:28,645 INFO    Thread-2  :1072 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-01-19 17:55:28,656 INFO    Thread-2  :1072 [backend.py:ensure_launched():216] starting backend process...
+2022-01-19 17:55:28,664 INFO    Thread-2  :1072 [backend.py:ensure_launched():221] started backend process with pid: 1087
+2022-01-19 17:55:28,666 INFO    Thread-2  :1072 [wandb_init.py:init():469] backend started and connected
+2022-01-19 17:55:28,671 INFO    Thread-2  :1072 [wandb_run.py:_config_callback():956] config_cb None None {'batch_size': 20, 'drop_out': 0.15, 'epochs': 3, 'lr': 0.01, 'optimizer': 'sgd'}
+2022-01-19 17:55:28,675 INFO    Thread-2  :1072 [wandb_init.py:init():533] updated telemetry
+2022-01-19 17:55:28,698 INFO    Thread-2  :1072 [wandb_init.py:init():563] communicating current version
+2022-01-19 17:55:30,317 INFO    Thread-2  :1072 [wandb_init.py:init():568] got version response 
+2022-01-19 17:55:30,317 INFO    Thread-2  :1072 [wandb_init.py:init():578] communicating run to backend with 30 second timeout
+2022-01-19 17:55:30,536 INFO    Thread-2  :1072 [wandb_init.py:init():606] starting run threads in backend
+2022-01-19 17:55:32,517 INFO    Thread-2  :1072 [wandb_run.py:_console_start():1810] atexit reg
+2022-01-19 17:55:32,518 INFO    Thread-2  :1072 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.REDIRECT
+2022-01-19 17:55:32,519 INFO    Thread-2  :1072 [wandb_run.py:_redirect():1689] Redirecting console.
+2022-01-19 17:55:32,521 ERROR   Thread-2  :1072 [wandb_run.py:_redirect():1748] Failed to redirect.
+Traceback (most recent call last):
+  File "/home/s133583/anaconda3/envs/ml_ops_proj/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1741, in _redirect
+    out_redir.install()
+  File "/home/s133583/anaconda3/envs/ml_ops_proj/lib/python3.9/site-packages/wandb/sdk/lib/redirect.py", line 709, in install
+    _WSCH.add_fd(self._pipe_read_fd)
+  File "/home/s133583/anaconda3/envs/ml_ops_proj/lib/python3.9/site-packages/wandb/sdk/lib/redirect.py", line 659, in add_fd
+    self._register()
+  File "/home/s133583/anaconda3/envs/ml_ops_proj/lib/python3.9/site-packages/wandb/sdk/lib/redirect.py", line 644, in _register
+    old_handler = signal.signal(signal.SIGWINCH, lambda *_: None)
+  File "/home/s133583/anaconda3/envs/ml_ops_proj/lib/python3.9/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread of the main interpreter
+2022-01-19 17:55:32,527 INFO    Thread-2  :1072 [wandb_init.py:init():633] run started, returning control to user process
+2022-01-19 17:56:34,377 INFO    Thread-2  :1072 [wandb_run.py:finish():1457] finishing run amazonproject/Amazon-Reviews/saudohz1
+2022-01-19 17:56:35,116 INFO    Thread-2  :1072 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 0
+2022-01-19 17:56:37,038 INFO    Thread-2  :1072 [wandb_run.py:_restore():1752] restore
+2022-01-19 17:56:37,886 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 1
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 1477
+  total_bytes: 1477
+}
+
+2022-01-19 17:56:38,045 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 1
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 1477
+  total_bytes: 1477
+}
+
+2022-01-19 17:56:38,863 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 1
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 1477
+  total_bytes: 1477
+}
+
+2022-01-19 17:56:39,110 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 1
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 1477
+  total_bytes: 1477
+}
+
+2022-01-19 17:56:39,213 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 5
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 1477
+  total_bytes: 10559
+}
+
+2022-01-19 17:56:39,315 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 5
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 1477
+  total_bytes: 10559
+}
+
+2022-01-19 17:56:39,425 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 5
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 1477
+  total_bytes: 10559
+}
+
+2022-01-19 17:56:39,527 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 5
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 9975
+  total_bytes: 10559
+}
+
+2022-01-19 17:56:39,630 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 5
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10559
+  total_bytes: 10559
+}
+
+2022-01-19 17:56:39,732 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 5
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10559
+  total_bytes: 10559
+}
+
+2022-01-19 17:56:40,386 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 5
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10559
+  total_bytes: 10559
+}
+
+2022-01-19 17:56:40,532 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 5
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10559
+  total_bytes: 10559
+}
+
+2022-01-19 17:56:41,110 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 5
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10559
+  total_bytes: 10559
+}
+
+2022-01-19 17:56:42,191 INFO    Thread-2  :1072 [wandb_run.py:_wait_for_finish():1912] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+  media_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10559
+  total_bytes: 10559
+}
+local_info {
+}
+
+2022-01-19 17:56:42,753 ERROR   Thread-1  :1072 [internal_api.py:execute():144] 404 response executing GraphQL.
+2022-01-19 17:56:42,754 ERROR   Thread-1  :1072 [internal_api.py:execute():145] {"errors":[{"message":"could not find agent mt0nuz0w during agentHeartbeat","path":["agentHeartbeat"]}],"data":{"agentHeartbeat":null}}
+2022-01-19 17:56:46,038 INFO    Thread-2  :1072 [wandb_run.py:_append_history():2130] rendering history
+2022-01-19 17:56:46,042 INFO    Thread-2  :1072 [wandb_run.py:_append_summary():2085] rendering summary
+2022-01-19 17:56:46,048 INFO    Thread-2  :1072 [wandb_run.py:_append_files():2180] logging synced files

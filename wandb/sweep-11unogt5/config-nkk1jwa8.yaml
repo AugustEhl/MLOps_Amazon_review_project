@@ -1,0 +1,14 @@
+wandb_version: 1
+
+batch_size:
+  value: 200
+drop_out:
+  value: 0.25
+epochs:
+  value: 5
+lr:
+  value: 0.001
+num_workers:
+  value: 8
+optimizer:
+  value: sgd
