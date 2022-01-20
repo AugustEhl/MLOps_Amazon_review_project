@@ -44,10 +44,7 @@ table = wandb.Table(columns=["ReviewRating", "PredictedRating"])
 RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 torch.manual_seed(RANDOM_SEED)
-device = torch.cuda.device("cuda" if torch.cuda.is_available() else "cpu")
-torch.cuda.manual_seed_all(RANDOM_SEED)
-dist.init_process_group(backend='nccl', init_method='env://')
-torch.cuda.set_device(2)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 loss_fn = nn.CrossEntropyLoss().to(device)
 
 
@@ -135,10 +132,6 @@ def train(config=None):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         print(f'Training on {device}')
         model = build_model(config.drop_out).to(device)
-        model = DDP(
-            model,
-            device_ids=[0,1]
-        )
         train_set = torch.load('data/processed/train.pth')
         trainloader = build_dataLoader(train_set, config.batch_size)
         optimizer = build_optimizer(config.optimizer, model, config.lr)
