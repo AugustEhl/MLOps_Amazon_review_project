@@ -1,0 +1,21 @@
+{
+    "os": "Darwin-21.2.0-x86_64-i386-64bit",
+    "python": "3.7.11",
+    "heartbeatAt": "2022-01-20T21:41:21.684528",
+    "startedAt": "2022-01-20T21:41:20.123991",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/augustehlers/miniconda3/envs/p37/lib/python3.7/cProfile.py",
+    "git": {
+        "remote": "git@github.com:AugustEhl/MLOps_Amazon_review_project.git",
+        "commit": "3faabc16977aa1678e4785a1ed985916f5e0e60e"
+    },
+    "email": "august.ehlers@gmail.com",
+    "root": "/Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Amazon_review_project",
+    "host": "MacBook-Pro-tilhrende-August.local",
+    "username": "augustehlers",
+    "executable": "/Users/augustehlers/miniconda3/envs/p37/bin/python"
+}

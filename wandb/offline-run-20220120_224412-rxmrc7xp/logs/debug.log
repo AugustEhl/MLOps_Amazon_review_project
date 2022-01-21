@@ -1,0 +1,34 @@
+2022-01-20 22:44:12,025 INFO    Thread-2  :16046 [wandb_setup.py:_flush():71] setting env: {'entity': 'amazonproject', 'project': 'Amazon-Reviews-local', 'root_dir': '/Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Amazon_review_project', 'sweep_id': '46ju0ba5', 'run_id': 'rxmrc7xp', 'sweep_param_path': '/Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Amazon_review_project/wandb/sweep-46ju0ba5/config-rxmrc7xp.yaml'}
+2022-01-20 22:44:12,025 WARNING Thread-2  :16046 [wandb_setup.py:_flush():71] could not save program above cwd: /Users/augustehlers/miniconda3/envs/p37/lib/python3.7/cProfile.py
+2022-01-20 22:44:12,025 INFO    Thread-2  :16046 [wandb_init.py:_log_setup():371] Logging user logs to /Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Amazon_review_project/wandb/offline-run-20220120_224412-rxmrc7xp/logs/debug.log
+2022-01-20 22:44:12,025 INFO    Thread-2  :16046 [wandb_init.py:_log_setup():372] Logging internal logs to /Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Amazon_review_project/wandb/offline-run-20220120_224412-rxmrc7xp/logs/debug-internal.log
+2022-01-20 22:44:12,026 INFO    Thread-2  :16046 [wandb_init.py:init():404] calling init triggers
+2022-01-20 22:44:12,026 INFO    Thread-2  :16046 [wandb_init.py:init():411] wandb.init called with sweep_config: {'batch_size': 75, 'drop_out': 0.35, 'lr': 0.01, 'optimizer': 'sgd'}
+config: {}
+2022-01-20 22:44:12,026 INFO    Thread-2  :16046 [wandb_init.py:init():460] starting backend
+2022-01-20 22:44:12,026 INFO    Thread-2  :16046 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-01-20 22:44:12,039 INFO    Thread-2  :16046 [backend.py:ensure_launched():216] starting backend process...
+2022-01-20 22:44:12,048 INFO    Thread-2  :16046 [backend.py:ensure_launched():222] started backend process with pid: 16056
+2022-01-20 22:44:12,052 INFO    Thread-2  :16046 [wandb_init.py:init():469] backend started and connected
+2022-01-20 22:44:12,056 INFO    Thread-2  :16046 [wandb_run.py:_config_callback():956] config_cb None None {'batch_size': 75, 'drop_out': 0.35, 'lr': 0.01, 'optimizer': 'sgd'}
+2022-01-20 22:44:12,059 INFO    Thread-2  :16046 [wandb_init.py:init():533] updated telemetry
+2022-01-20 22:44:12,110 INFO    Thread-2  :16046 [wandb_init.py:init():606] starting run threads in backend
+2022-01-20 22:44:15,485 INFO    Thread-2  :16046 [wandb_run.py:_console_start():1810] atexit reg
+2022-01-20 22:44:15,486 INFO    Thread-2  :16046 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.REDIRECT
+2022-01-20 22:44:15,486 INFO    Thread-2  :16046 [wandb_run.py:_redirect():1689] Redirecting console.
+2022-01-20 22:44:15,486 ERROR   Thread-2  :16046 [wandb_run.py:_redirect():1748] Failed to redirect.
+Traceback (most recent call last):
+  File "/Users/augustehlers/miniconda3/envs/p37/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1741, in _redirect
+    out_redir.install()
+  File "/Users/augustehlers/miniconda3/envs/p37/lib/python3.7/site-packages/wandb/sdk/lib/redirect.py", line 709, in install
+    _WSCH.add_fd(self._pipe_read_fd)
+  File "/Users/augustehlers/miniconda3/envs/p37/lib/python3.7/site-packages/wandb/sdk/lib/redirect.py", line 659, in add_fd
+    self._register()
+  File "/Users/augustehlers/miniconda3/envs/p37/lib/python3.7/site-packages/wandb/sdk/lib/redirect.py", line 644, in _register
+    old_handler = signal.signal(signal.SIGWINCH, lambda *_: None)
+  File "/Users/augustehlers/miniconda3/envs/p37/lib/python3.7/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread
+2022-01-20 22:44:15,488 INFO    Thread-2  :16046 [wandb_init.py:init():633] run started, returning control to user process
+2022-01-20 22:46:32,431 INFO    MainThread:16046 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 255
+2022-01-20 22:46:32,432 INFO    MainThread:16046 [wandb_run.py:_restore():1752] restore

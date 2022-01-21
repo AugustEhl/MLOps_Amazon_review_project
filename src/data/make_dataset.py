@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
+# Load modules
 import gzip
 import logging
 import os
 from pathlib import Path
 
+# use click to give arguments
+# Load packages
 import click
 import numpy as np
 import pandas as pd
@@ -14,16 +17,13 @@ from sklearn.model_selection import train_test_split
 from transformers import BertTokenizer
 from AmazonData import AmazonData
 
-RANDOM_SEED = 42
-np.random.seed(RANDOM_SEED)
-torch.manual_seed(RANDOM_SEED)
-
+# Defining parse
 def parse(path):
     g = gzip.open(path, "rb")
     for l in g:
         yield eval(l)
 
-
+# Defining pandas dataframe
 def getDF(path):
     i = 0
     df = {}
@@ -32,7 +32,7 @@ def getDF(path):
         i += 1
     return pd.DataFrame.from_dict(df, orient="index")
 
-
+# Sentiment "rating" values
 def to_sentiment(rating):
     rating = int(rating)
     if rating <= 2:
@@ -42,7 +42,7 @@ def to_sentiment(rating):
     else:
         return 2
 
-
+# Class names
 class_names = ["negative", "neutral", "positive"]
 
 
@@ -59,18 +59,27 @@ def main(input_filepath, output_filepath):
         print(
             "Raw data folder appears to be empty. Downloading the data to raw data folder."
         )
+        # url to data
         url = "http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Amazon_Instant_Video_5.json.gz"
+        # Download file from url
         filepath = wget.download(url, out=input_filepath)
         print(filepath, "Download finished!")
+    # Load data into pandas dataframe
     df = getDF(input_filepath + "/reviews_Amazon_Instant_Video_5.json.gz")
+    # Extracting relevant data
     data = df["reviewText"].to_numpy()
+    # Extracting labels
     labels = df["overall"].apply(to_sentiment).to_list()
+    # Split data into train and test
     X_train, X_test, Y_train, Y_test = train_test_split(
         data, labels, train_size=0.75, test_size=0.25, random_state=42, shuffle=True
     )
+    # save the splits
     np.savez(input_filepath + "/../interim/train.npz", x=X_train, y=Y_train)
     np.savez(input_filepath + "/../interim/test.npz", x=X_test, y=Y_test)
+    # Define tokenizer
     tokenizer = tokenizer = BertTokenizer.from_pretrained("bert-base-cased")
+    # Create dataclasses
     train_data = AmazonData(
         reviews=X_train,
         targets=Y_train,
@@ -83,10 +92,11 @@ def main(input_filepath, output_filepath):
         tokenizer=tokenizer,
         max_length=20,
     )
+    # Save data classes
     torch.save(train_data, output_filepath + "/train.pth")
     torch.save(test_data, output_filepath + "/test.pth")
 
-
+# Python
 if __name__ == "__main__":
     log_fmt = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     logging.basicConfig(level=logging.INFO, format=log_fmt)
