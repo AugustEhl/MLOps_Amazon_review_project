@@ -1,5 +1,5 @@
 steps:
 - name: 'predict2'
-  args: ['build', '-t', 'gcr.io/dtumlops-338513/pytorch-latest-gpu-v20211219', '.']
+  args: ['build', '-t', 'gcr.io/dtumlops-338513/pytorch-latest-gpu-v20211219', './backend']
 - name: 'predict2'
   args: ['push', 'gcr.io/dtumlops-338513/pytorch-latest-gpu-v20211219']
