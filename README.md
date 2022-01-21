@@ -28,5 +28,6 @@ Lastly ,the model can be validated on the test set by executing from root of the
 
 We have already run all this and experiment logs can be found here:
  - "https://wandb.ai/amazonproject/Amazon-Reviews-v2/reports/Amazon_video_ratings--VmlldzoxNDY2MDEz"
-Furthermore, profiling of trainscript can be visualized with snakeviz with following command:
+
+Furthermore, profiling of trainscript can be visualized with snakeviz with following command: 
  - snakeviz train.prof  
