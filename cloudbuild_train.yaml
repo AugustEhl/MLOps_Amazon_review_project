@@ -1,0 +1,6 @@
+steps:
+- name: 'matoestudent/trainer2'
+  args: ['build', '-t', 'gcr.io/dtumlops-338513/pytorch-latest-gpu-v20211219', '.']
+- name: 'matoestudent/trainer2'
+  args: ['push', 'gcr.io/dtumlops-338513/pytorch-latest-gpu-v20211219']
+
