@@ -109,40 +109,12 @@ def main(input_filepath, output_filepath):
     cleaned data ready to be analyzed (saved in ../processed).
     """
     logger = logging.getLogger(__name__)
-    logger.info('making final data set from raw data')
-    '''if 'reviews_Amazon_Instant_Video_5.json.gz' not in os.listdir(input_filepath):
-        print('Raw data folder appears to be empty. Downloading the data to raw data folder.')
-        url = 'http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Amazon_Instant_Video_5.json.gz'
-        filepath = wget.download(url, out=input_filepath)
-        print(filepath, 'Download finished!')'''
-
-    
+    logger.info('making final data set from raw data') 
     train_data, test_data =data_preprocessing(input_filepath)
     torch.save(train_data, output_filepath + "/train.pth")
     torch.save(test_data, output_filepath + "/test.pth")
 
-    '''df = getDF(input_filepath + '/reviews_Amazon_Instant_Video_5.json.gz')
-    data = df['reviewText'].to_numpy()
-    labels = df['overall'].apply(to_sentiment).to_list()
-    X_train, X_test, Y_train, Y_test = train_test_split(data,labels, train_size=0.75, test_size=0.25, random_state=42, shuffle=True)
-    np.savez(input_filepath + '/../interim/train.npz', x=X_train, y=Y_train)
-    np.savez(input_filepath + '/../interim/test.npz', x=X_test, y=Y_test)
-    tokenizer = tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
-    train_data = AmazonData(
-        reviews=X_train,
-        targets=Y_train,
-        tokenizer=tokenizer,
-        max_length=20,
-    )
-    test_data = AmazonData(
-        reviews=X_test,
-        targets=Y_test,
-        tokenizer=tokenizer,
-        max_length=20,
-    )
-    torch.save(train_data, output_filepath + "/train.pth")
-    torch.save(test_data, output_filepath + "/test.pth")
-'''
+   
 
 if __name__ == "__main__":
     log_fmt = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
