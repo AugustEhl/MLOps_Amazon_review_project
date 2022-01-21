@@ -9,6 +9,7 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 # Loading modules
 import click
 import torch
+from torch import nn, Tensor
 import torch.nn.functional as F
 
 # Append data path
@@ -20,14 +21,30 @@ from make_dataset import AmazonData
 # Set device to cuda or cpu
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
+# Define model class
+class SentimentClassifier(nn.Module):
+    def __init__(self, n_classes: int, p: float):
+        super(SentimentClassifier, self).__init__()
+        # load pretrained BERT-model
+        self.bert = BertModel.from_pretrained("bert-base-cased")
+        self.drop = nn.Dropout(p=p)
+        self.out = nn.Linear(self.bert.config.hidden_size, n_classes)
+
+    def forward(self, input_ids: Tensor, attention_mask: Tensor) -> Tensor:
+        _, pooled_output = self.bert(
+            input_ids=input_ids, attention_mask=attention_mask, return_dict=False
+        )
+        output = self.drop(pooled_output)
+        return self.out(output)
+
 # Add arguments
 @click.command()
 @click.argument("batch_size", type=click.INT, default=20)
 @click.argument("data", type=click.Path(), default="data/processed/test.pth")
-@click.argument("load_model_path", type = click.Path(), default="models/model_optsgd_bs20_do0.15_lr0.01.pth")
+@click.argument("load_model_path", type = click.Path(), default="models/run_v2/model_optsgd_bs200_do0_35_lr0_01.pth")
 def evaluate(batch_size: int, data: str, load_model_path: str):
     # load model
-    model = torch.load(load_model_path)
+    model = torch.load(load_model_path, map_location=torch.device('cpu'))
     # load test set
     test_set = torch.load(data)
     # create testloader
