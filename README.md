@@ -27,6 +27,6 @@ Lastly ,the model can be validated on the test set by executing from root of the
  - python src/models/predict_model.py
 
 We have already run all this and experiment logs can be found here:
- - <iframe src="https://wandb.ai/amazonproject/Amazon-Reviews-v2/reports/Amazon_video_ratings--VmlldzoxNDY2MDEz" style="border:none;height:1024px;width:100%">
+ - "https://wandb.ai/amazonproject/Amazon-Reviews-v2/reports/Amazon_video_ratings--VmlldzoxNDY2MDEz"
 Furthermore, profiling of trainscript can be visualized with snakeviz with following command:
  - snakeviz train.prof  
