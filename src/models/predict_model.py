@@ -8,15 +8,8 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Loading modules
 import click
-import numpy as np
-from sklearn.metrics import confusion_matrix
 import torch
 import torch.nn.functional as F
-import wandb
-from torch import nn, optim
-from torch.utils.data import DataLoader
-from transformers import BertModel
-from train_model import SentimentClassifier
 
 # Append data path
 sys.path.insert(0, os.getcwd() + "/src/data/")
@@ -32,7 +25,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 @click.argument("batch_size", type=click.INT, default=20)
 @click.argument("data", type=click.Path(), default="data/processed/test.pth")
 @click.argument("load_model_path", type = click.Path(), default="models/model_optsgd_bs20_do0.15_lr0.01.pth")
-def evaluate(batch_size, data, load_model_path):
+def evaluate(batch_size: int, data: str, load_model_path: str):
     # load model
     model = torch.load(load_model_path)
     # load test set

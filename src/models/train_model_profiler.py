@@ -2,6 +2,7 @@
 import os
 import sys
 import warnings
+from typing import List
 
 # Ignore future warnings that arises from BertModel
 warnings.filterwarnings("ignore", category=FutureWarning)
@@ -10,7 +11,7 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 import numpy as np
 import torch
 import torch.nn.functional as F
-from torch import nn, optim
+from torch import Tensor, nn, optim
 from torch.utils.data import DataLoader
 from transformers import BertModel
 
@@ -33,14 +34,14 @@ loss_fn = nn.CrossEntropyLoss().to(device)
 
 # Load class model
 class SentimentClassifier(nn.Module):
-    def __init__(self, n_classes, p):
+    def __init__(self, n_classes: int, p: float):
         super(SentimentClassifier, self).__init__()
         # load BERT-model
         self.bert = BertModel.from_pretrained("bert-base-cased")
         self.drop = nn.Dropout(p=p)
         self.out = nn.Linear(self.bert.config.hidden_size, n_classes)
 
-    def forward(self, input_ids, attention_mask):
+    def forward(self, input_ids: Tensor, attention_mask: Tensor) -> Tensor:
         _, pooled_output = self.bert(
             input_ids=input_ids, attention_mask=attention_mask, return_dict=False
         )
@@ -48,18 +49,18 @@ class SentimentClassifier(nn.Module):
         return self.out(output)
 
 # Build dataloader
-def build_dataLoader(data, batch_size):
+def build_dataLoader(data, batch_size: int) :
     return DataLoader(data, batch_size=batch_size, shuffle=True)
 
 # Build optimizer
-def build_optimizer(opt, model, lr):
+def build_optimizer(opt, model, lr: float):
     if opt == 'adam':
         return optim.Adam(model.parameters(), lr=lr, betas=(0.85,0.89), weight_decay=1e-3)
     else:
         return optim.SGD(model.parameters(), lr=lr, momentum=0.9, weight_decay=1e-3)
 
 # Define train-loop
-def train_epoch(model, trainloader, optimizer):
+def train_epoch(model, trainloader, optimizer) -> List:
     running_loss = 0
     running_acc = 0
     num_batches = len(trainloader)
@@ -92,7 +93,7 @@ def train_epoch(model, trainloader, optimizer):
     return running_loss / num_batches, running_acc
 
 # build model
-def build_model(dropout):
+def build_model(dropout: float):
     return SentimentClassifier(n_classes=3, p=dropout)
 
 # Train
