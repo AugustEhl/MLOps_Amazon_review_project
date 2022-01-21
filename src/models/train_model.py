@@ -147,7 +147,7 @@ def train(config=None):
         # build optimizer
         optimizer = build_optimizer(config.optimizer, model, config.lr)
         # number of epochs
-        num_epochs = 5
+        num_epochs = 10
         # Set the model to train mode
         model.train()
         for i in range(num_epochs):
@@ -173,4 +173,4 @@ def train(config=None):
 # python
 if __name__ == "__main__":
     # run the agent
-    wandb.agent(sweep_id, train, count=5)
+    wandb.agent(sweep_id, train, count=15)
